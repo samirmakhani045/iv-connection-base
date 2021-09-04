@@ -34,6 +34,8 @@ FlashMessage.propTypes = {
   label: PropTypes.string.isRequired,
   /** Display a cta button */
   withAction: PropTypes.bool,
+  /** make Alert full width */
+  isFullWidth: PropTypes.bool,
   /** Props to pass down to button */
   button: PropTypes.shape({
     /** Text that is visible and readable on the button */
@@ -50,6 +52,7 @@ FlashMessage.propTypes = {
 FlashMessage.defaultProps = {
   variant: 'default',
   withAction: false,
+  isFullWidth: false,
 };
 
 export default FlashMessage;

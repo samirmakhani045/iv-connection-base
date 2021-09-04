@@ -7,6 +7,7 @@ import ConnectionInputs from '../connection-inputs/ConnectionInputs';
 import ConnectionGroups from '../connection-groups/ConnectionGroups';
 
 import Step from './Step';
+import { P, StepWrapper, StepBody } from './Stepper.styles';
 
 const Stepper = ({ steps }) => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -67,8 +68,8 @@ const Stepper = ({ steps }) => {
 
   return (
     <>
-      <p className="connecionText">Create new connection</p>
-      <div className="stepWrapper">
+      <P>Create new connection</P>
+      <StepWrapper>
         {steps.map((item, index) => (
           <Step
             key={index}
@@ -78,8 +79,8 @@ const Stepper = ({ steps }) => {
             selected={currentStep === index + 1}
           />
         ))}
-      </div>
-      <div className="stepBody">{getStepContent(currentStep)}</div>
+      </StepWrapper>
+      <StepBody>{getStepContent(currentStep)}</StepBody>
     </>
   );
 };

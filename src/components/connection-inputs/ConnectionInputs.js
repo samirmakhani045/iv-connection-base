@@ -1,9 +1,34 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import './ConnectionInputs.scss';
+import FlashMessage from '@studio/components/flash-message/FlashMessage';
+import { withTranslation } from '@utils/decorators';
+
 import Input from '../input/Input';
 import Button from '../button/Button';
+
+import {
+  ConnectionInputsContainer,
+  InputImages,
+  StepFooterContainer,
+  ConnectionDiv,
+  TestButtonContainer,
+} from './connection-inputs.styles';
+const positivedefaultProps = {
+  label: 'Your connection has been tested & is now working',
+  variant: 'positive',
+  isFullWidth: true,
+};
+const alertdefaultProps = {
+  label: 'We could not connect with your source. Make sure to fill all the input correctly.',
+  variant: 'alert',
+  isFullWidth: true,
+};
+const PositiveFlasHMessage = (props) =>
+  withTranslation(() => <FlashMessage {...positivedefaultProps} {...props} />);
+
+const AlertFlasHMessage = (props) =>
+  withTranslation(() => <FlashMessage {...alertdefaultProps} {...props} />);
 
 const ConnectionInputs = ({
   connectionType,
@@ -55,28 +80,28 @@ const ConnectionInputs = ({
 
   return (
     <>
-      <div className="connection-inputs">
+      <ConnectionInputsContainer>
         {connectionType === 'snowflake' && (
           <div>
-            <img className="input-images" src="images/snowflake-icon.png" alt="snowflake" />
+            <InputImages src="images/snowflake-icon.png" alt="snowflake"></InputImages>
           </div>
         )}
         {connectionType === 'github' && (
           <div>
-            <img className="input-images" src="images/github-icon.png" alt="github" />
+            <InputImages src="images/github-icon.png" alt="snowflake"></InputImages>
           </div>
         )}
         {connectionType === 'postgreSql' && (
           <div>
-            <img className="input-images" src="images/postgresql-icon.png" alt="postgreSql" />
+            <InputImages src="images/postgresql-icon.png" alt="snowflake"></InputImages>
           </div>
         )}
         {connectionType === 'mySql' && (
           <div>
-            <img className="input-images" src="images/mysql-icon.png" alt="mySql" />
+            <InputImages src="images/mysql-icon.png" alt="snowflake"></InputImages>
           </div>
         )}
-        <div className="connection-div">
+        <ConnectionDiv>
           <Input
             type="text"
             maxLength="35"
@@ -86,8 +111,8 @@ const ConnectionInputs = ({
             label="Nick name *"
             id="nickName"
           />
-        </div>
-        <div className="connection-div">
+        </ConnectionDiv>
+        <ConnectionDiv>
           <Input
             type="text"
             maxLength="35"
@@ -97,8 +122,8 @@ const ConnectionInputs = ({
             label="Datebase name"
             id="database"
           />
-        </div>
-        <div className="connection-div">
+        </ConnectionDiv>
+        <ConnectionDiv>
           <Input
             type="text"
             maxLength="35"
@@ -108,8 +133,8 @@ const ConnectionInputs = ({
             label="Warehouse"
             id="warehouse"
           />
-        </div>
-        <div className="connection-div">
+        </ConnectionDiv>
+        <ConnectionDiv>
           <Input
             type="text"
             maxLength="35"
@@ -119,8 +144,8 @@ const ConnectionInputs = ({
             label="Server"
             id="server"
           />
-        </div>
-        <div className="connection-div">
+        </ConnectionDiv>
+        <ConnectionDiv>
           <Input
             type="text"
             maxLength="5"
@@ -131,27 +156,19 @@ const ConnectionInputs = ({
             id="port"
             isNumber="true"
           />
-        </div>
-        <div className="testButton">
+        </ConnectionDiv>
+        <TestButtonContainer>
           <Button
             variant="light"
             isFull="true"
             onClick={() => testConnection()}
             label="Test connection"
           />
-        </div>
-        {isShowSuccess && (
-          <div className="connection-success">
-            <p>Your connection has been tested & is now working</p>
-          </div>
-        )}
-        {isShowError && (
-          <div className="connection-error">
-            <p>We could not connect with your source. Make sure to fill all the input correctly.</p>
-          </div>
-        )}
-      </div>
-      <div className="stepFooter">
+        </TestButtonContainer>
+        {isShowSuccess && <PositiveFlasHMessage></PositiveFlasHMessage>}
+        {isShowError && <AlertFlasHMessage></AlertFlasHMessage>}
+      </ConnectionInputsContainer>
+      <StepFooterContainer>
         <Button variant="light" onClick={() => backStep()} label="Back" />
         <Button
           variant="dark"
@@ -159,7 +176,7 @@ const ConnectionInputs = ({
           onClick={() => forwardStep()}
           label="Next"
         />
-      </div>
+      </StepFooterContainer>
     </>
   );
 };

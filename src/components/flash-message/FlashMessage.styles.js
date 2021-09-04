@@ -34,6 +34,7 @@ export const Wrapper = styled('div', {
   justifyContent: 'center',
   padding: props.withAction ? '0.6rem 0.6rem 0.6rem 1.2rem' : '1.2rem',
   textAlign: 'left',
+  width: props?.isFullWidth ? '100%' : 'auto',
 }));
 
 export const StyledButton = styled(Button)({
