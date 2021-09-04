@@ -10,6 +10,7 @@ import Step from './Step';
 
 const Stepper = ({ steps }) => {
   const [currentStep, setCurrentStep] = useState(1);
+  const [stepError, setStepError] = useState(false);
   const [formValues, setFormValues] = useState({
     connectionType: null,
     nickName: '',
@@ -31,6 +32,11 @@ const Stepper = ({ steps }) => {
     setCurrentStep(currentStep + 1);
   };
 
+  const setError = (err) => {
+    console.log('Line----35 Stepper.js', err);
+    setStepError(err);
+  };
+
   const getStepContent = (step) => {
     switch (step) {
       case 1:
@@ -49,6 +55,7 @@ const Stepper = ({ steps }) => {
             activeStep={currentStep}
             previousStep={previousStep}
             nextStep={nextStep}
+            setStepError={setError}
           />
         );
       case 3:
@@ -76,6 +83,7 @@ const Stepper = ({ steps }) => {
             label={item}
             completed={currentStep > index + 1}
             selected={currentStep === index + 1}
+            stepError={stepError}
           />
         ))}
       </div>

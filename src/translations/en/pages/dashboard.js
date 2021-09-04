@@ -1,6 +1,7 @@
 module.exports = {
   menu: {
     create: 'Create flow',
+    connection: 'Create a connection',
   },
   header: {
     title: 'Dashboard',

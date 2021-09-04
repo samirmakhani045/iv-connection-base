@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { mapCommonStates } from '@utils/store';
 import { useTranslation } from '@studio/hooks/useTranslation';
 import { DashboardSidebar, DashboardHeader } from '@studio/components/dashboard';
+
 import Stepper from '@studio/components/stepper/Stepper';
 
-import { Wrapper, DashboardContent, ContentWrapper } from './Dashboard.styles';
+import { Wrapper, DashboardContent, ConnectionDialog } from './Dashboard.styles';
 
 const Dashboard = (props) => {
   const {
@@ -15,6 +16,7 @@ const Dashboard = (props) => {
     onInvite,
   } = props;
   const { t } = useTranslation('pages.dashboard');
+  const [showConnection, setShowConnection] = useState(false);
 
   const handleOnCreateFlow = () => {
     console.log('handleOnCreateFlow');
@@ -25,19 +27,35 @@ const Dashboard = (props) => {
     console.log('handleOnInvite');
     onInvite();
   };
-  const steps = ['SELECT A SOURCE', 'ENTER A CREDENTIALS', 'ADD TO GROUP(S)'];
 
+  const handleOnCreateConnection = () => {
+    setShowConnection(!showConnection);
+  };
+  const steps = ['SELECT A SOURCE', 'ENTER A CREDENTIALS', 'ADD TO GROUP(S)'];
   return (
     <Wrapper>
-      <DashboardSidebar {...sidebar} onCreateFlow={handleOnCreateFlow} onInvite={handleOnInvite} />
+      <DashboardSidebar
+        {...sidebar}
+        onCreateFlow={handleOnCreateFlow}
+        onInvite={handleOnInvite}
+        onCreateConnection={handleOnCreateConnection}
+      />
       <DashboardContent>
         <DashboardHeader title={t('header.title')} onCreateFlow={handleOnCreateFlow} {...header} />
-        <ContentWrapper>
-          <div className="container">
+      </DashboardContent>
+      {showConnection && (
+        <ConnectionDialog onClick={() => setShowConnection(false)}>
+          <div
+            className="container"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+            }}
+          >
             <Stepper steps={steps} />
           </div>
-        </ContentWrapper>
-      </DashboardContent>
+        </ConnectionDialog>
+      )}
     </Wrapper>
   );
 };
@@ -61,6 +79,7 @@ Dashboard.propTypes = {
   onCreateFlow: PropTypes.func,
   /** Callback to invite new groupmates */
   onInvite: PropTypes.func,
+  connectors: PropTypes.array,
 };
 
 export default mapCommonStates(Dashboard);

@@ -16,7 +16,6 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
       <div className="top">
         <div className="topgroup">
           <div>
-            {/* <img className="input-images" src={snowFlackIcno}></img> */}
             {connectionType === 'snowflake' && (
               <div>
                 <img className="input-images" src="images/snowflake-icon.png" alt="snowflake" />
@@ -81,9 +80,13 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
 };
 
 ConnectionGroups.propTypes = {
+  // Gives connection image
   connectionType: PropTypes.string.isRequired,
+  // Make previous step presing on next button
   previousStep: PropTypes.func.isRequired,
+  // Input check box value
   onlyMe: PropTypes.bool,
+  // All user check box
   allUsers: PropTypes.bool,
 };
 

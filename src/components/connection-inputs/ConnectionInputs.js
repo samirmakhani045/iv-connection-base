@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import './ConnectionInputs.scss';
 import Input from '../input/Input';
 import Button from '../button/Button';
+
+import {
+  ConnectionDiv,
+  TestButton,
+  ConnectionMessage,
+  Text,
+  InputWrapper,
+  InputImages,
+} from './ConnectionInputs.styles';
 
 const ConnectionInputs = ({
   connectionType,
@@ -14,6 +22,7 @@ const ConnectionInputs = ({
   port,
   previousStep,
   nextStep,
+  setStepError,
 }) => {
   const [nickNameValue, setNickName] = useState(nickName);
   const [databaseNameValue, setDatabaseName] = useState(databaseName);
@@ -26,10 +35,16 @@ const ConnectionInputs = ({
   const testConnection = () => {
     if (!nickNameValue) {
       setError(true);
+      if (setStepError) {
+        setStepError(true);
+      }
       setSuccess(false);
     } else {
       setSuccess(true);
       setError(false);
+      if (setStepError) {
+        setStepError(false);
+      }
     }
   };
 
@@ -55,28 +70,28 @@ const ConnectionInputs = ({
 
   return (
     <>
-      <div className="connection-inputs">
+      <InputWrapper>
         {connectionType === 'snowflake' && (
           <div>
-            <img className="input-images" src="images/snowflake-icon.png" alt="snowflake" />
+            <InputImages src="images/snowflake-icon.png" alt="snowflake" />
           </div>
         )}
         {connectionType === 'github' && (
           <div>
-            <img className="input-images" src="images/github-icon.png" alt="github" />
+            <InputImages src="images/github-icon.png" alt="github" />
           </div>
         )}
         {connectionType === 'postgreSql' && (
           <div>
-            <img className="input-images" src="images/postgresql-icon.png" alt="postgreSql" />
+            <InputImages src="images/postgresql-icon.png" alt="postgreSql" />
           </div>
         )}
         {connectionType === 'mySql' && (
           <div>
-            <img className="input-images" src="images/mysql-icon.png" alt="mySql" />
+            <InputImages src="images/mysql-icon.png" alt="mySql" />
           </div>
         )}
-        <div className="connection-div">
+        <ConnectionDiv>
           <Input
             type="text"
             maxLength="35"
@@ -86,8 +101,8 @@ const ConnectionInputs = ({
             label="Nick name *"
             id="nickName"
           />
-        </div>
-        <div className="connection-div">
+        </ConnectionDiv>
+        <ConnectionDiv>
           <Input
             type="text"
             maxLength="35"
@@ -97,8 +112,8 @@ const ConnectionInputs = ({
             label="Datebase name"
             id="database"
           />
-        </div>
-        <div className="connection-div">
+        </ConnectionDiv>
+        <ConnectionDiv>
           <Input
             type="text"
             maxLength="35"
@@ -108,8 +123,8 @@ const ConnectionInputs = ({
             label="Warehouse"
             id="warehouse"
           />
-        </div>
-        <div className="connection-div">
+        </ConnectionDiv>
+        <ConnectionDiv>
           <Input
             type="text"
             maxLength="35"
@@ -119,8 +134,8 @@ const ConnectionInputs = ({
             label="Server"
             id="server"
           />
-        </div>
-        <div className="connection-div">
+        </ConnectionDiv>
+        <ConnectionDiv>
           <Input
             type="text"
             maxLength="5"
@@ -131,26 +146,28 @@ const ConnectionInputs = ({
             id="port"
             isNumber="true"
           />
-        </div>
-        <div className="testButton">
+        </ConnectionDiv>
+        <TestButton>
           <Button
             variant="light"
             isFull="true"
             onClick={() => testConnection()}
             label="Test connection"
           />
-        </div>
+        </TestButton>
         {isShowSuccess && (
-          <div className="connection-success">
-            <p>Your connection has been tested & is now working</p>
-          </div>
+          <ConnectionMessage success={true}>
+            <Text success={true}>Your connection has been tested & is now working</Text>
+          </ConnectionMessage>
         )}
         {isShowError && (
-          <div className="connection-error">
-            <p>We could not connect with your source. Make sure to fill all the input correctly.</p>
-          </div>
+          <ConnectionMessage success={false}>
+            <Text success={false}>
+              We could not connect with your source. Make sure to fill all the input correctly.
+            </Text>
+          </ConnectionMessage>
         )}
-      </div>
+      </InputWrapper>
       <div className="stepFooter">
         <Button variant="light" onClick={() => backStep()} label="Back" />
         <Button
@@ -165,14 +182,24 @@ const ConnectionInputs = ({
 };
 
 ConnectionInputs.propTypes = {
+  // Gives connection image
   connectionType: PropTypes.string.isRequired,
+  // Nick text
   nickName: PropTypes.string.isRequired,
+  // Database text
   databaseName: PropTypes.string.isRequired,
+  // Warehouse text
   warehouse: PropTypes.string.isRequired,
+  // Server text
   server: PropTypes.string.isRequired,
+  // Port number text
   port: PropTypes.string.isRequired,
+  // Make forward step presing on next button
   nextStep: PropTypes.func.isRequired,
+  // Make previous step presing on next button
   previousStep: PropTypes.func.isRequired,
+  // When error accours then make red bottom line
+  setStepError: PropTypes.func,
 };
 
 export default ConnectionInputs;
