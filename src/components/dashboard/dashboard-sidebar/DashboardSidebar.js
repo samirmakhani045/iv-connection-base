@@ -16,7 +16,7 @@ import {
 import { menuOptions } from './config';
 
 const DashboardSidebar = (props) => {
-  const { companyTitle, companyIcon, onCreateFlow, onInvite } = props;
+  const { companyTitle, companyIcon, onCreateFlow, onInvite, onCreateConnection } = props;
   const { t } = useTranslation('pages.dashboard');
 
   return (
@@ -33,6 +33,15 @@ const DashboardSidebar = (props) => {
             icon="Add"
             variant="light"
             onClick={onCreateFlow}
+            small
+          />
+        )}
+        {onCreateConnection && (
+          <StyledButton
+            label={t('menu.connection')}
+            icon="Add"
+            variant="light"
+            onClick={onCreateConnection}
             small
           />
         )}
@@ -64,6 +73,8 @@ DashboardSidebar.propTypes = {
   onInvite: PropTypes.func,
   // TODO: create PropType for navigation(Will be required eventually)
   navigation: PropTypes.array,
+  /** Callback to create new connection. Hide create connection button if undefined */
+  onCreateConnection: PropTypes.func,
 };
 
 DashboardSidebar.defaultProps = {

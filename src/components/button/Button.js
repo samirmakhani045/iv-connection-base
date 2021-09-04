@@ -17,6 +17,7 @@ const Button = (props) => {
     logo,
     iconAlignRight,
     name,
+    isFull,
     onClick,
     ...remainingProps
   } = props;
@@ -30,6 +31,7 @@ const Button = (props) => {
       variant={variant}
       type={type}
       name={name}
+      isFull={isFull}
       onClick={disabled || !onClick ? undefined : onClick}
       iconAlignRight={iconAlignRight}
       data-testid="button"
@@ -74,6 +76,8 @@ Button.propTypes = {
   'aria-label': PropTypes.string,
   /** Indicates whether or not this button has a popup */
   'aria-haspopup': PropTypes.string,
+  // button full width
+  isFull: PropTypes.bool,
 };
 
 Button.defaultProps = {

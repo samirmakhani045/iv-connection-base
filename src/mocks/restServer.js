@@ -1,6 +1,7 @@
 import { createServer, Model } from 'miragejs';
 
 import getConnections from './responses/getConnections.json';
+import getConnectors from './responses/getConnectors.json';
 import getGroups from './responses/getGroups.json';
 import getFlows from './responses/getFlows.json';
 import getElementsA from './responses/flowA/getElements.json';
@@ -33,6 +34,7 @@ export function startRestServer({ environment = 'development' } = {}) {
       flow: Model,
       connection: Model,
       group: Model,
+      connector: Model,
     },
 
     seeds(server) {
@@ -46,6 +48,10 @@ export function startRestServer({ environment = 'development' } = {}) {
 
       getGroups.objects.forEach((group) => {
         server.create('group', group);
+      });
+
+      getConnectors.forEach((connector) => {
+        server.create('connector', connector);
       });
     },
 
@@ -76,6 +82,10 @@ export function startRestServer({ environment = 'development' } = {}) {
 
       this.get('/connections', () => {
         return getConnections;
+      });
+
+      this.get('/connector', () => {
+        return getConnectors;
       });
 
       this.put('/connections/:id', (schema, request) => {

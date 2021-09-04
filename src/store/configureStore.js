@@ -11,6 +11,7 @@ import flowSlice from './flow';
 import tableSlice from './table';
 import elementSlice from './element';
 import rowSlice from './row';
+import connectorSlice from './connector';
 
 const reducer = {
   appSlice,
@@ -21,6 +22,7 @@ const reducer = {
   tableSlice,
   elementSlice,
   rowSlice,
+  connectorSlice,
 };
 
 const middleware = [...getDefaultMiddleware(), restMiddleware, websocketMiddleware];

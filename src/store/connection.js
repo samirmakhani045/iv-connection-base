@@ -15,7 +15,6 @@ const slice = createSlice({
   reducers: {
     fetchConnectionsResponse: (state, { payload }) => {
       const { page, pageSize, totalPages, totalObjects, objects } = payload;
-
       state.page = page;
       state.pageSize = pageSize;
       state.totalPages = totalPages;
@@ -24,7 +23,6 @@ const slice = createSlice({
     },
     fetchConnectionResponse: (state, { payload }) => {
       const { connection } = payload;
-
       state.connection = connection;
     },
   },
