@@ -38,14 +38,13 @@ const ConnectionInputs = ({
       setError(true);
       if (setStepError) {
         setStepError(true);
+      } else {
+        setSuccess(false);
       }
-      setSuccess(false);
     } else {
+      setStepError(false);
       setSuccess(true);
       setError(false);
-      if (setStepError) {
-        setStepError(false);
-      }
     }
   };
 
