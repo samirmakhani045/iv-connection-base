@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import './Stepper.scss';
 import ConnectionTypes from '../connection-types/ConnectionType';
 import ConnectionInputs from '../connection-inputs/ConnectionInputs';
 import ConnectionGroups from '../connection-groups/ConnectionGroups';

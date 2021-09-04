@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './ConnectionType.scss';
 import { mapCommonStates } from '@utils/store';
 import { connectors } from '@studio/stories/dashboard/connector.mock';
 
