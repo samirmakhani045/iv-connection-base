@@ -1,10 +1,27 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import './ConnectionGroups.scss';
-import SelectedImage from '@studio/utils/selectedImage';
-
 import Button from '../button/Button';
+
+import { StepFooter } from '../stepper/Stepper.styles';
+
+import {
+  GroupWrapper,
+  TopGroup,
+  InputImages,
+  DatabaseText,
+  ConnectedText,
+  NumberTable,
+  ShareText,
+  InputBox,
+  InputBoxChild,
+  First,
+  BlankDiv,
+  OnlyMeText,
+  CheckBoxInput,
+  CustomCheckBox,
+  CheckTick,
+} from './ConnectionGroups.styles';
 
 const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) => {
   const [onlyMeValue, setOnlyMe] = useState(onlyMe);
@@ -15,49 +32,73 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
 
   return (
     <>
-      <div className="top">
-        <div className="topgroup">
+      <GroupWrapper>
+        <TopGroup>
           <div>
-            <SelectedImage connectionType={connectionType} />
+            {/* <img className="input-images" src={snowFlackIcno}></img> */}
+            {connectionType === 'snowflake' && (
+              <div>
+                <InputImages src="images/snowflake-icon.png" alt="snowflake" />
+              </div>
+            )}
+            {connectionType === 'github' && (
+              <div>
+                <InputImages src="images/github-icon.png" alt="github" />
+              </div>
+            )}
+            {connectionType === 'postgreSql' && (
+              <div>
+                <InputImages src="images/postgresql-icon.png" alt="postgreSql" />
+              </div>
+            )}
+            {connectionType === 'mySql' && (
+              <div>
+                <InputImages src="images/mysql-icon.png" alt="mySql" />
+              </div>
+            )}
           </div>
-          <div className="database-text">
+          <DatabaseText>
             <span>My database name</span>
-          </div>
-          <div className="connect-text">Connected</div>
-        </div>
-        <div className="number-table">34 tabs</div>
-      </div>
-      <div className="share-text">Share this connection with your groups</div>
-      <div className="input-box">
-        <div className="input-box-first">
-          <div className="first">
-            <div className="blank-div" />
-            <div className={`only-me-text ${!onlyMeValue ? 'fontColor' : ''}`}>Only Me</div>
-          </div>
-          <div className="custom-checkbox">
-            <input type="checkbox" checked={onlyMeValue} onClick={() => setOnlyMe(!onlyMeValue)} />
-            <span className="chk-tick" />
-          </div>
-        </div>
-        <div className="input-box-second">
-          <div className="first">
-            <div className="blank-div" />
-            <div className={`only-me-text ${!allUsersValue ? 'fontColor' : ''}`}>All Users</div>
-          </div>
-          <div className="custom-checkbox">
-            <input
+          </DatabaseText>
+          <ConnectedText>Connected</ConnectedText>
+        </TopGroup>
+        <NumberTable>34 tabs</NumberTable>
+      </GroupWrapper>
+      <ShareText>Share this connection with your groups</ShareText>
+      <InputBox>
+        <InputBoxChild first>
+          <First>
+            <BlankDiv first />
+            <OnlyMeText fontColor={!onlyMeValue}>Only Me</OnlyMeText>
+          </First>
+          <CustomCheckBox>
+            <CheckBoxInput
+              type="checkbox"
+              checked={onlyMeValue}
+              onClick={() => setOnlyMe(!onlyMeValue)}
+            />
+            <CheckTick />
+          </CustomCheckBox>
+        </InputBoxChild>
+        <InputBoxChild>
+          <First>
+            <BlankDiv />
+            <OnlyMeText fontColor={!allUsersValue}>All Users</OnlyMeText>
+          </First>
+          <CustomCheckBox>
+            <CheckBoxInput
               type="checkbox"
               checked={allUsersValue}
               onClick={() => setAllUsers(!allUsersValue)}
             />
-            <span className="chk-tick" />
-          </div>
-        </div>
-      </div>
-      <div className="stepFooter">
+            <CheckTick />
+          </CustomCheckBox>
+        </InputBoxChild>
+      </InputBox>
+      <StepFooter>
         <Button variant="light" onClick={() => backStep()} label="Back" />
         <Button variant="dark" disabled="true" label="Next" />
-      </div>
+      </StepFooter>
     </>
   );
 };

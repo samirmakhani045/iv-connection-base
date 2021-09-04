@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './ConnectionType.scss';
 import { mapCommonStates } from '@utils/store';
 import { connectors } from '@studio/stories/dashboard/connector.mock';
+
+import { TypeBody, Type, TypeImage, TypeSpan } from './ConnectionType.styles';
 
 const ConnectionTypes = ({ nextStep }) => {
   const selectType = (value) => {
@@ -11,15 +12,15 @@ const ConnectionTypes = ({ nextStep }) => {
   };
 
   return (
-    <div className="type-body">
+    <TypeBody>
       {connectors.map((connect, i) => (
-        <div className="type" onClick={() => selectType(connect.type)} aria-hidden="true" key={i}>
-          <img src={`images/${connect.iconPath}`} alt="snowflake" />
-          <span>{connect.title}</span>
-          <img className="close-icon" src="images/close-arrow-bg.png" alt="close" />
-        </div>
+        <Type onClick={() => selectType(connect.type)} aria-hidden="true" key={i}>
+          <TypeImage src={`images/${connect.iconPath}`} alt="snowflake" />
+          <TypeSpan>{connect.title}</TypeSpan>
+          <TypeImage close={true} src="images/close-arrow-bg.png" alt="close" />
+        </Type>
       ))}
-    </div>
+    </TypeBody>
   );
 };
 
