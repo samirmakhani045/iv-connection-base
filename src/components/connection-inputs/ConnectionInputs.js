@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Input from '../input/Input';
 import Button from '../button/Button';
 
+import { StepFooter } from '../stepper/Stepper.styles';
+
 import {
   ConnectionDiv,
   TestButton,
@@ -168,7 +170,7 @@ const ConnectionInputs = ({
           </ConnectionMessage>
         )}
       </InputWrapper>
-      <div className="stepFooter">
+      <StepFooter>
         <Button variant="light" onClick={() => backStep()} label="Back" />
         <Button
           variant="dark"
@@ -176,7 +178,7 @@ const ConnectionInputs = ({
           onClick={() => forwardStep()}
           label="Next"
         />
-      </div>
+      </StepFooter>
     </>
   );
 };

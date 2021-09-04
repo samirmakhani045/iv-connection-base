@@ -76,25 +76,11 @@ export const BlankDiv = styled.div((props) => ({
   borderRadius: '4px',
 }));
 
-export const OnlyMeTextv = styled.div({
+export const OnlyMeText = styled.div((props) => ({
   paddingLeft: '5px',
   fontSize: '18px',
-});
-
-export const CustomCheckBox = styled.div({
-  display: 'block',
-  height: '22px',
-  width: '22px',
-  position: 'relative',
-  padding: '0px',
-  cursor: 'pointer',
-  fontSize: '16px',
-  lineHeight: '22px',
-  // -webkit-user-select: 'none',
-  // -moz-user-select: 'none',
-  // -ms-user-select: 'none',
-  userSelect: 'none',
-});
+  color: props.fontColor && '#798b9c',
+}));
 
 export const CheckBoxInput = styled.input({
   top: '0',
@@ -117,3 +103,41 @@ export const CheckTick = styled.span({
   borderRadius: '5px',
   backgroundColor: '#fff',
 });
+
+export const CustomCheckBox = styled.div`
+  display: block;
+  height: 22px;
+  width: 22px;
+  position: relative;
+  padding: 0px;
+  cursor: pointer;
+  fontsize: 16px;
+  lineheight: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  userselect: none;
+
+  &:hover input ~ ${CheckTick} {
+    background-color: #fff;
+  }
+
+  ${CheckBoxInput}:checked ~ ${CheckTick} {
+    border: 1px solid #fff;
+    background-color: #313336;
+  }
+
+  input:checked ~ ${CheckTick}:after {
+    display: block;
+  }
+
+  ${CheckTick}:after {
+    left: 8px;
+    top: 2px;
+    width: 7px;
+    height: 15px;
+    border: solid #fff;
+    border-width: 0px 3px 3px 0;
+    transform: rotate(45deg);
+  }
+`;
