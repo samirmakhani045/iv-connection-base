@@ -1,0 +1,42 @@
+.connection-inputs {
+  .input-images {
+    width: 34px;
+    padding-bottom: 16px;
+  }
+
+  .testButton {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+
+  .connection-success {
+    width: 100%;
+    height: 50px;
+    padding: 15px 0px;
+    border-radius: 5px;
+    margin: 16px 0px;
+    background: #d8f6ef;
+    p {
+      color: #58c8ae;
+    }
+  }
+
+  .connection-error {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 52px;
+    padding: 15px 0px;
+    border-radius: 5px;
+    margin: 16px 0px;
+    background: #ffebec;
+    p {
+      color: #f76c6c;
+    }
+  }
+
+  .connection-div {
+    text-align: left;
+    padding-bottom: 16px;
+  }
+}

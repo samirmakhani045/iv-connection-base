@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { mapCommonStates } from '@utils/store';
 import { useTranslation } from '@studio/hooks/useTranslation';
 import { DashboardSidebar, DashboardHeader } from '@studio/components/dashboard';
+import Stepper from '@studio/components/stepper/Stepper';
 
 import { Wrapper, DashboardContent, ContentWrapper } from './Dashboard.styles';
 
@@ -24,6 +25,7 @@ const Dashboard = (props) => {
     console.log('handleOnInvite');
     onInvite();
   };
+  const steps = ['SELECT A SOURCE', 'ENTER A CREDENTIALS', 'ADD TO GROUP(S)'];
 
   return (
     <Wrapper>
@@ -31,7 +33,9 @@ const Dashboard = (props) => {
       <DashboardContent>
         <DashboardHeader title={t('header.title')} onCreateFlow={handleOnCreateFlow} {...header} />
         <ContentWrapper>
-          <p>TODO: add content here</p>
+          <div className="container">
+            <Stepper steps={steps} />
+          </div>
         </ContentWrapper>
       </DashboardContent>
     </Wrapper>

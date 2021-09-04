@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import { isIconValid } from '@utils/stories/getAllIcons';
@@ -6,13 +6,35 @@ import { isIconValid } from '@utils/stories/getAllIcons';
 import { Wrapper, StyledInput, Label, Span, StyledIcon, Error } from './Input.styles';
 
 const Input = (props) => {
-  const { disabled, id, label, type, name, value, icon, error, required, ...remainingProps } =
-    props;
-  const [inputValue, setInputValue] = useState(value);
+  const {
+    onChange,
+    disabled,
+    id,
+    label,
+    type,
+    name,
+    value,
+    icon,
+    error,
+    required,
+    maxLength,
+    isNumber,
+    ...remainingProps
+  } = props;
 
-  const handleOnChange = (ev) => {
-    setInputValue(ev.target.value);
+  const onKeyDown = (evt) => {
+    const charCode = evt.which ? evt.which : evt.keyCode;
+    if (isNumber && charCode > 31 && (charCode < 48 || charCode > 57)) {
+      evt.preventDefault();
+    }
+    return true;
   };
+
+  // const [inputValue, setInputValue] = useState(value);
+
+  // const handleOnChange = (ev) => {
+  //   setInputValue(ev.target.value);
+  // };
 
   return (
     <Wrapper data-testid="wrapper">
@@ -21,11 +43,13 @@ const Input = (props) => {
           data-testid="input"
           id={id}
           name={name}
+          onKeyDown={(e) => onKeyDown(e)}
           type={type}
           disabled={disabled}
           required={required}
-          value={inputValue}
-          onChange={handleOnChange}
+          value={value}
+          maxLength={maxLength}
+          onChange={onChange}
           withError={!!error}
           withIcon={!!isIconValid(icon)}
           aria-invalid={!!error}
@@ -39,7 +63,7 @@ const Input = (props) => {
             data-testid="inputLabel"
             withError={!!error}
             withIcon={!!isIconValid(icon)}
-            withValue={!!inputValue}
+            withValue={!!value}
           >
             {label}
           </Span>
@@ -74,6 +98,12 @@ Input.propTypes = {
   error: PropTypes.string,
   /** Set input as required */
   required: PropTypes.bool,
+  // Callback function
+  onChange: PropTypes.func.isRequired,
+  // max length of number
+  maxLength: PropTypes.bool.isRequired,
+  // is number
+  isNumber: PropTypes.bool,
 };
 
 Input.defaultProps = {

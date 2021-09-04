@@ -1,0 +1,35 @@
+.type-body {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.type {
+  padding: 20px 9px;
+  position: relative;
+  border-bottom: 1px solid #0000001a;
+  &:hover {
+    background-color: #eee;
+  }
+}
+
+.type img {
+  width: 32px;
+}
+
+.type span {
+  padding-top: 5px;
+  padding-left: 14px;
+  font-size: 20px;
+  position: absolute;
+}
+
+.noborder {
+  border: none;
+}
+
+.close-icon {
+  float: right;
+  width: 15px !important;
+  padding-top: 5px;
+}
