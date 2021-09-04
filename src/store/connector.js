@@ -10,7 +10,6 @@ const slice = createSlice({
   reducers: {
     fetchConnectorResponse: (state, { payload }) => {
       const { objects } = payload;
-      console.log('Line----13 connector.js', payload);
       state.connectors = objects;
     },
   },

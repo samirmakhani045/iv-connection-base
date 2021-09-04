@@ -33,7 +33,6 @@ const Stepper = ({ steps }) => {
   };
 
   const setError = (err) => {
-    console.log('Line----35 Stepper.js', err);
     setStepError(err);
   };
 

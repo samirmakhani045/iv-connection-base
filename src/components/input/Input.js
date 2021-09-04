@@ -30,12 +30,6 @@ const Input = (props) => {
     return true;
   };
 
-  // const [inputValue, setInputValue] = useState(value);
-
-  // const handleOnChange = (ev) => {
-  //   setInputValue(ev.target.value);
-  // };
-
   return (
     <Wrapper data-testid="wrapper">
       <Label id={`${id}-label`} htmlFor={id}>
