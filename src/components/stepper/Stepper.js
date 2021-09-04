@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import './Stepper.scss';
 import ConnectionTypes from '../connection-types/ConnectionType';
 import ConnectionInputs from '../connection-inputs/ConnectionInputs';
 import ConnectionGroups from '../connection-groups/ConnectionGroups';
+
+import { ConnectionText, StepWrapper, StepBody } from './Stepper.styles';
 
 import Step from './Step';
 
@@ -25,6 +26,7 @@ const Stepper = ({ steps }) => {
   const previousStep = (newValues) => {
     setFormValues({ ...formValues, ...newValues });
     setCurrentStep(currentStep - 1);
+    setStepError(currentStep - 1 === 0);
   };
 
   const nextStep = (newValues) => {
@@ -73,8 +75,8 @@ const Stepper = ({ steps }) => {
 
   return (
     <>
-      <p className="connecionText">Create new connection</p>
-      <div className="stepWrapper">
+      <ConnectionText>Create new connection</ConnectionText>
+      <StepWrapper>
         {steps.map((item, index) => (
           <Step
             key={index}
@@ -82,16 +84,17 @@ const Stepper = ({ steps }) => {
             label={item}
             completed={currentStep > index + 1}
             selected={currentStep === index + 1}
-            stepError={stepError}
+            stepError={index === 1 && stepError}
           />
         ))}
-      </div>
-      <div className="stepBody">{getStepContent(currentStep)}</div>
+      </StepWrapper>
+      <StepBody>{getStepContent(currentStep)}</StepBody>
     </>
   );
 };
 
 Stepper.propTypes = {
+  // Array of setps heading
   steps: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 

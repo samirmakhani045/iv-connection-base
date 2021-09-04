@@ -1,24 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { StepLabel, CircleWrapper, Circle, StepBlock } from './Stepper.styles';
+
 const Step = ({ selected, completed, index, label, stepError }) => (
   <>
-    <div className={`stepBlock ${selected ? 'selected' : ''} ${completed ? 'completed' : ''}`}>
-      <span className="stepLabel">
+    <StepBlock>
+      <StepLabel>
         {index + 1}.{label}
-      </span>
-      <div className="circleWrapper">
-        <div className={`circle ${stepError && selected ? 'stepperError' : ''}`} />
-      </div>
-    </div>
+      </StepLabel>
+      <CircleWrapper>
+        <Circle stepperError={stepError && selected} completed={completed} selected={selected} />
+      </CircleWrapper>
+    </StepBlock>
   </>
 );
 
 Step.propTypes = {
+  // When tab is selected
   selected: PropTypes.bool.isRequired,
+  // When move forward from previous tab
   completed: PropTypes.bool.isRequired,
+  // Tab label
   label: PropTypes.string.isRequired,
+  // Tab index
   index: PropTypes.number.isRequired,
+  // When there was a error in current tab
   stepError: PropTypes.bool,
 };
 
