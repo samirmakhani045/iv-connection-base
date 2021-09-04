@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import './Stepper.scss';
+import { useTranslation } from '@studio/hooks/useTranslation';
+
 import ConnectionTypes from '../connection-types/ConnectionType';
 import ConnectionInputs from '../connection-inputs/ConnectionInputs';
 import ConnectionGroups from '../connection-groups/ConnectionGroups';
@@ -9,6 +11,7 @@ import ConnectionGroups from '../connection-groups/ConnectionGroups';
 import Step from './Step';
 
 const Stepper = ({ steps }) => {
+  const { t } = useTranslation('components.stepper');
   const [currentStep, setCurrentStep] = useState(1);
   const [stepError, setStepError] = useState(false);
   const [formValues, setFormValues] = useState({
@@ -73,7 +76,7 @@ const Stepper = ({ steps }) => {
 
   return (
     <>
-      <p className="connecionText">Create new connection</p>
+      <p className="connecionText"> {t('CreateConnection')}</p>
       <div className="stepWrapper">
         {steps.map((item, index) => (
           <Step

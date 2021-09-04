@@ -6,7 +6,8 @@ const navigationBar = require('./navigationBar');
 const table = require('./table');
 const toggle = require('./toggle');
 const zoomControls = require('./zoomControls');
-
+const stepper = require('./stepper');
+const connectionGroups = require('./connectionGroups');
 module.exports = {
   drawer,
   flashMessage,
@@ -16,4 +17,6 @@ module.exports = {
   table,
   toggle,
   zoomControls,
+  stepper,
+  connectionGroups,
 };

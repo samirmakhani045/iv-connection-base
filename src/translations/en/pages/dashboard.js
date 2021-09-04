@@ -16,4 +16,9 @@ module.exports = {
     buttonLabel: 'Invite to Openlytics',
     buttonIcon: 'Invite',
   },
+  Stepper: {
+    selectSource: 'SELECT A SOURCE',
+    sourceCredentials: 'ENTER A CREDENTIALS',
+    sourceAddGroup: 'ADD TO GROUP(S)',
+  },
 };

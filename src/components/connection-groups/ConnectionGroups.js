@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import './ConnectionGroups.scss';
 import SelectedImage from '@studio/utils/selectedImage';
+import { useTranslation } from '@studio/hooks/useTranslation';
 
 import Button from '../button/Button';
 
@@ -12,7 +13,7 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
   const backStep = () => {
     previousStep({ onlyMe: onlyMeValue, allUsers: allUsersValue });
   };
-
+  const { t } = useTranslation('components.connectionGroups');
   return (
     <>
       <div className="top">
@@ -21,18 +22,18 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
             <SelectedImage connectionType={connectionType} />
           </div>
           <div className="database-text">
-            <span>My database name</span>
+            <span> {t('databaseName')} </span>
           </div>
-          <div className="connect-text">Connected</div>
+          <div className="connect-text">{t('connected')}</div>
         </div>
-        <div className="number-table">34 tabs</div>
+        <div className="number-table">34 {t('tab')} </div>
       </div>
-      <div className="share-text">Share this connection with your groups</div>
+      <div className="share-text">{t('shareConnectionGroups')}</div>
       <div className="input-box">
         <div className="input-box-first">
           <div className="first">
             <div className="blank-div" />
-            <div className={`only-me-text ${!onlyMeValue ? 'fontColor' : ''}`}>Only Me</div>
+            <div className={`only-me-text ${!onlyMeValue ? 'fontColor' : ''}`}>{t('onlyMe')}</div>
           </div>
           <div className="custom-checkbox">
             <input type="checkbox" checked={onlyMeValue} onClick={() => setOnlyMe(!onlyMeValue)} />
@@ -42,7 +43,9 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
         <div className="input-box-second">
           <div className="first">
             <div className="blank-div" />
-            <div className={`only-me-text ${!allUsersValue ? 'fontColor' : ''}`}>All Users</div>
+            <div className={`only-me-text ${!allUsersValue ? 'fontColor' : ''}`}>
+              {t('allUser')}
+            </div>
           </div>
           <div className="custom-checkbox">
             <input
@@ -55,8 +58,8 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
         </div>
       </div>
       <div className="stepFooter">
-        <Button variant="light" onClick={() => backStep()} label="Back" />
-        <Button variant="dark" disabled="true" label="Next" />
+        <Button variant="light" onClick={() => backStep()} label={t('back')} />
+        <Button variant="dark" disabled="true" label={t('next')} />
       </div>
     </>
   );

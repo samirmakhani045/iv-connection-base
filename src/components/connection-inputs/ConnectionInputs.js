@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
+import { useTranslation } from '@studio/hooks/useTranslation';
 import SelectedImage from '@studio/utils/selectedImage';
 
 import Input from '../input/Input';
@@ -67,7 +67,7 @@ const ConnectionInputs = ({
       port: portValue,
     });
   };
-
+  const { t } = useTranslation('common.forms');
   return (
     <>
       <InputWrapper>
@@ -79,7 +79,7 @@ const ConnectionInputs = ({
             value={nickNameValue}
             name="nickName"
             onChange={(e) => setNickName(e.target.value)}
-            label="Nick name *"
+            label={t('fields.nickName') + '*'}
             id="nickName"
           />
         </ConnectionDiv>
@@ -90,7 +90,7 @@ const ConnectionInputs = ({
             value={databaseNameValue}
             name="databaseName"
             onChange={(e) => setDatabaseName(e.target.value)}
-            label="Datebase name"
+            label={t('fields.databaseName')}
             id="database"
           />
         </ConnectionDiv>
@@ -101,7 +101,7 @@ const ConnectionInputs = ({
             value={warehouseValue}
             name="warehouse"
             onChange={(e) => setWarehouse(e.target.value)}
-            label="Warehouse"
+            label={t('fields.warehouse')}
             id="warehouse"
           />
         </ConnectionDiv>
@@ -112,7 +112,7 @@ const ConnectionInputs = ({
             value={serverValue}
             name="server"
             onChange={(e) => setServer(e.target.value)}
-            label="Server"
+            label={t('fields.server')}
             id="server"
           />
         </ConnectionDiv>
@@ -123,7 +123,7 @@ const ConnectionInputs = ({
             value={portValue}
             name="port"
             onChange={(e) => setPort(e.target.value)}
-            label="Port"
+            label={t('fields.port')}
             id="port"
             isNumber={true}
           />
@@ -138,14 +138,12 @@ const ConnectionInputs = ({
         </TestButton>
         {isShowSuccess && (
           <ConnectionMessage success={true}>
-            <Text success={true}>Your connection has been tested & is now working</Text>
+            <Text success={true}></Text>
           </ConnectionMessage>
         )}
         {isShowError && (
           <ConnectionMessage success={false}>
-            <Text success={false}>
-              We could not connect with your source. Make sure to fill all the input correctly.
-            </Text>
+            <Text success={false}>{t('errors.dbConnectionError.required')}</Text>
           </ConnectionMessage>
         )}
       </InputWrapper>

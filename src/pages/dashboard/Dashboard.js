@@ -16,6 +16,7 @@ const Dashboard = (props) => {
     onInvite,
   } = props;
   const { t } = useTranslation('pages.dashboard');
+
   const [showConnection, setShowConnection] = useState(false);
 
   const handleOnCreateFlow = () => {
@@ -31,7 +32,11 @@ const Dashboard = (props) => {
   const handleOnCreateConnection = () => {
     setShowConnection(!showConnection);
   };
-  const steps = ['SELECT A SOURCE', 'ENTER A CREDENTIALS', 'ADD TO GROUP(S)'];
+  const steps = [
+    t('Stepper.selectSource'),
+    t('Stepper.sourceCredentials'),
+    t('Stepper.sourceAddGroup'),
+  ];
   return (
     <Wrapper>
       <DashboardSidebar
