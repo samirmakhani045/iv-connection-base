@@ -1,11 +1,30 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import './ConnectionGroups.scss';
-import SelectedImage from '@studio/utils/selectedImage';
 import { useTranslation } from '@studio/hooks/useTranslation';
 
+import SelectedImage from '@studio/utils/selectedImage';
+
 import Button from '../button/Button';
+
+import { StepFooter } from '../stepper/Stepper.styles';
+
+import {
+  GroupWrapper,
+  TopGroup,
+  DatabaseText,
+  ConnectedText,
+  NumberTable,
+  ShareText,
+  InputBox,
+  InputBoxChild,
+  First,
+  BlankDiv,
+  OnlyMeText,
+  CheckBoxInput,
+  CustomCheckBox,
+  CheckTick,
+} from './ConnectionGroups.styles';
 
 const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) => {
   const [onlyMeValue, setOnlyMe] = useState(onlyMe);
@@ -16,51 +35,53 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
   const { t } = useTranslation('components.connectionGroups');
   return (
     <>
-      <div className="top">
-        <div className="topgroup">
+      <GroupWrapper>
+        <TopGroup>
           <div>
             <SelectedImage connectionType={connectionType} />
           </div>
-          <div className="database-text">
-            <span> {t('databaseName')} </span>
-          </div>
-          <div className="connect-text">{t('connected')}</div>
-        </div>
-        <div className="number-table">34 {t('tab')} </div>
-      </div>
-      <div className="share-text">{t('shareConnectionGroups')}</div>
-      <div className="input-box">
-        <div className="input-box-first">
-          <div className="first">
-            <div className="blank-div" />
-            <div className={`only-me-text ${!onlyMeValue ? 'fontColor' : ''}`}>{t('onlyMe')}</div>
-          </div>
-          <div className="custom-checkbox">
-            <input type="checkbox" checked={onlyMeValue} onClick={() => setOnlyMe(!onlyMeValue)} />
-            <span className="chk-tick" />
-          </div>
-        </div>
-        <div className="input-box-second">
-          <div className="first">
-            <div className="blank-div" />
-            <div className={`only-me-text ${!allUsersValue ? 'fontColor' : ''}`}>
-              {t('allUser')}
-            </div>
-          </div>
-          <div className="custom-checkbox">
-            <input
+          <DatabaseText>
+            <span>{t('databaseName')}</span>
+          </DatabaseText>
+          <ConnectedText>{t('connected')}</ConnectedText>
+        </TopGroup>
+        <NumberTable>34 {t('tab')}</NumberTable>
+      </GroupWrapper>
+      <ShareText>{t('shareConnectionGroups')}</ShareText>
+      <InputBox>
+        <InputBoxChild first>
+          <First>
+            <BlankDiv first />
+            <OnlyMeText fontColor={!onlyMeValue}>{t('onlyMe')}</OnlyMeText>
+          </First>
+          <CustomCheckBox>
+            <CheckBoxInput
+              type="checkbox"
+              checked={onlyMeValue}
+              onClick={() => setOnlyMe(!onlyMeValue)}
+            />
+            <CheckTick />
+          </CustomCheckBox>
+        </InputBoxChild>
+        <InputBoxChild>
+          <First>
+            <BlankDiv />
+            <OnlyMeText fontColor={!allUsersValue}>{t('allUser')}</OnlyMeText>
+          </First>
+          <CustomCheckBox>
+            <CheckBoxInput
               type="checkbox"
               checked={allUsersValue}
               onClick={() => setAllUsers(!allUsersValue)}
             />
-            <span className="chk-tick" />
-          </div>
-        </div>
-      </div>
-      <div className="stepFooter">
-        <Button variant="light" onClick={() => backStep()} label={t('back')} />
-        <Button variant="dark" disabled="true" label={t('next')} />
-      </div>
+            <CheckTick />
+          </CustomCheckBox>
+        </InputBoxChild>
+      </InputBox>
+      <StepFooter>
+        <Button variant="light" onClick={() => backStep()} label="Back" />
+        <Button variant="dark" disabled="true" label="Next" />
+      </StepFooter>
     </>
   );
 };
