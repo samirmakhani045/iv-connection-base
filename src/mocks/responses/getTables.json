@@ -1,0 +1,74 @@
+{
+  "page": 1,
+  "pageSize": 100,
+  "totalObjects": 3,
+  "totalPages": 1,
+  "objects": [
+    {
+      "id": "c48cbb15-c6c5-44b0-bf9d-17cf05a52b02",
+      "name": "sales_revenue_2020",
+      "connection": {
+        "id": "a840fe5f-56a3-4770-84f6-d5c5894ec8ab",
+        "name": "Snowflake sales database",
+        "type": "snowflake"
+      },
+      "size": {
+        "totalRows": 12,
+        "totalColumns": 2
+      },
+      "schema": [
+        { "label": "Month", "type": "text" },
+        { "label": "Sales", "type": "number" }
+      ],
+      "sampleRows": [
+        ["January", 100000],
+        ["February", 90000],
+        ["March", 40000]
+      ]
+    },
+    {
+      "id": "5d637364-7ae6-4a03-823c-e8f463cd4d90",
+      "name": "profit_2020",
+      "connection": {
+        "id": "a840fe5f-56a3-4770-84f6-d5c5894ec8ab",
+        "name": "Snowflake sales database",
+        "type": "snowflake"
+      },
+      "size": {
+        "totalRows": 12,
+        "totalColumns": 2
+      },
+      "schema": [
+        { "label": "Month", "type": "text" },
+        { "label": "Profit", "type": "number" }
+      ],
+      "sampleRows": [
+        ["January", 1000],
+        ["February", 900],
+        ["March", 400]
+      ]
+    },
+    {
+      "id": "aa202e4f-9c93-4bd9-9067-01638dd8c99c",
+      "name": "employees",
+      "connection": {
+        "id": "40fe0303-9288-4202-82ab-eba9dfca1c24",
+        "name": "MySQL HR database",
+        "type": "mysql"
+      },
+      "size": {
+        "totalRows": 1500,
+        "totalColumns": 2
+      },
+      "schema": [
+        { "label": "First name", "type": "text" },
+        { "label": "Last name", "type": "text" }
+      ],
+      "sampleRows": [
+        ["John", "Smith"],
+        ["Mary", "Adams"],
+        ["Linda", "Thompson"]
+      ]
+    }
+  ]
+}

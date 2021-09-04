@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Icon /> should render a different icon, bigger and red 1`] = `
+<div
+  class="Iconstyles__IconWrapper-sc-1ghvgbo-0 kDPqTt"
+  data-testid="wrapper"
+  size="60"
+>
+  <svg
+    data-testid="icon"
+    fill="#E93A5A"
+    height="1em"
+    transform="rotate(0)"
+    viewBox="0 0 24 24"
+    width="1em"
+  >
+    <path
+      d="M9.29492 16.885L13.8749 12.295L9.29492 7.70498L10.7049 6.29498L16.7049 12.295L10.7049 18.295L9.29492 16.885Z"
+    />
+  </svg>
+</div>
+`;
+
+exports[`<Icon /> should render correctly 1`] = `
+<div
+  class="Iconstyles__IconWrapper-sc-1ghvgbo-0 jzZALt"
+  data-testid="wrapper"
+  size="24"
+>
+  <svg
+    data-testid="icon"
+    fill="#313336"
+    height="1em"
+    viewBox="0 0 24 24"
+    width="1em"
+  >
+    <path
+      d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+    />
+  </svg>
+</div>
+`;

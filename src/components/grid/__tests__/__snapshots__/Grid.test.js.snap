@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Grid /> should render correctly 1`] = `
+<div
+  class="Gridstyles__Wrapper-qir3g0-0 RwFea"
+  data-testid="grid"
+  width="144rem"
+/>
+`;
+
+exports[`<Grid /> should support changing content alignment, number of columns, gap, gutter and width 1`] = `
+<div
+  class="Gridstyles__Wrapper-qir3g0-0 kWlzTO"
+  data-testid="grid"
+  width="100rem"
+/>
+`;
+
+exports[`<Grid /> should support configuration on different breakpoints 1`] = `
+<div
+  class="Gridstyles__Wrapper-qir3g0-0 dPjpBP"
+  data-testid="grid"
+  width="144rem"
+/>
+`;

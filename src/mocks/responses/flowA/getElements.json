@@ -1,0 +1,238 @@
+{
+  "page": 1,
+  "pageSize": 100,
+  "totalPages": 1,
+  "totalObjects": 17,
+  "objects": [
+    {
+      "id": "c1",
+      "type": "source",
+      "x": 20,
+      "y": 0,
+      "label": "Salary per city",
+      "settings": {
+        "table": "city_salary",
+        "connection": {
+          "id": "c2a77b07-4a64-428f-9179-cd55bbc21943",
+          "name": "File in S3: city_salary.csv",
+          "type": "csv_url"
+        },
+        "maxRows": null
+      }
+    },
+    {
+      "id": "c2",
+      "type": "source",
+      "x": 20,
+      "y": 94,
+      "label": "Cost of living per city",
+      "settings": {
+        "table": "city_cost",
+        "connection": {
+          "id": "1c68a2db-825b-4c57-a473-34c8ed97a5dd",
+          "type": "csv_url",
+          "name": "File in S3: city_cost.csv"
+        },
+        "maxRows": null
+      }
+    },
+    {
+      "id": "c4",
+      "type": "source",
+      "x": 20,
+      "y": 200,
+      "label": "Income tax per state",
+      "settings": {
+        "table": "state_tax",
+        "connection": {
+          "id": "e8d995b3-ad7d-464d-9791-f6198436af48",
+          "name": "File in S3: state_tax.csv",
+          "type": "csv_url"
+        },
+        "maxRows": null
+      }
+    },
+    {
+      "id": "c5",
+      "type": "join",
+      "x": 170,
+      "y": 47,
+      "label": "Join by city",
+      "settings": {
+        "joinType": "inner",
+        "joinOn": [
+          {
+            "leftColumn": "City",
+            "rightColumn": "City"
+          },
+          {
+            "leftColumn": "State",
+            "rightColumn": "State"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c7",
+      "type": "join",
+      "x": 300,
+      "y": 185,
+      "label": "Join by state",
+      "settings": {
+        "joinType": "inner",
+        "joinOn": [
+          {
+            "leftColumn": "State",
+            "rightColumn": "StateCode"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c8",
+      "type": "formula",
+      "x": 480,
+      "y": 185,
+      "label": "Compute savings per city",
+      "settings": {
+        "newColumnLabel": "Savings",
+        "expression": "Round(Salary * (1 - 0.32 - TaxPercent/100) - CostOfLiving)"
+      }
+    },
+    {
+      "id": "c9",
+      "type": "sort",
+      "x": 660,
+      "y": 185,
+      "label": "Sort cities by decreasing savings",
+      "settings": {
+        "sortBy": [
+          {
+            "column": "Savings",
+            "direction": "descending"
+          },
+          {
+            "column": "City",
+            "direction": "ascending"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c10",
+      "type": "limit",
+      "x": 840,
+      "y": 185,
+      "label": "Limit to top cities",
+      "settings": {
+        "limit": 5
+      }
+    },
+    {
+      "id": "c11",
+      "type": "sink",
+      "x": 1020,
+      "y": 185,
+      "label": "Export cities to CSV file in S3",
+      "settings": {
+        "file": "top_cities.csv"
+      }
+    },
+    {
+      "id": "c12",
+      "type": "edge",
+      "from": {
+        "nodeId": "c1",
+        "portId": "o"
+      },
+      "to": {
+        "nodeId": "c5",
+        "portId": "iL"
+      }
+    },
+    {
+      "id": "c13",
+      "type": "edge",
+      "from": {
+        "nodeId": "c2",
+        "portId": "o"
+      },
+      "to": {
+        "nodeId": "c5",
+        "portId": "iR"
+      }
+    },
+    {
+      "id": "c16",
+      "type": "edge",
+      "from": {
+        "nodeId": "c5",
+        "portId": "o"
+      },
+      "to": {
+        "nodeId": "c7",
+        "portId": "iL"
+      }
+    },
+    {
+      "id": "c17",
+      "type": "edge",
+      "from": {
+        "nodeId": "c4",
+        "portId": "o"
+      },
+      "to": {
+        "nodeId": "c7",
+        "portId": "iR"
+      }
+    },
+    {
+      "id": "c18",
+      "type": "edge",
+      "from": {
+        "nodeId": "c7",
+        "portId": "o"
+      },
+      "to": {
+        "nodeId": "c8",
+        "portId": "i"
+      }
+    },
+    {
+      "id": "c19",
+      "type": "edge",
+      "from": {
+        "nodeId": "c8",
+        "portId": "o"
+      },
+      "to": {
+        "nodeId": "c9",
+        "portId": "i"
+      }
+    },
+    {
+      "id": "c20",
+      "type": "edge",
+      "from": {
+        "nodeId": "c9",
+        "portId": "o"
+      },
+      "to": {
+        "nodeId": "c10",
+        "portId": "i"
+      }
+    },
+    {
+      "id": "c21",
+      "type": "edge",
+      "from": {
+        "nodeId": "c10",
+        "portId": "o"
+      },
+      "to": {
+        "nodeId": "c11",
+        "portId": "i"
+      }
+    }
+  ]
+}

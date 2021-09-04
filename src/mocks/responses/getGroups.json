@@ -1,0 +1,108 @@
+{
+  "page": 1,
+  "pageSize": 100,
+  "totalPages": 1,
+  "totalObjects": 6,
+  "objects": [
+    {
+      "id": "adf01c3d-378a-4fdc-8edc-c88c47a9d19a",
+      "name": "Administrators",
+      "organizationId": "ac91bb43-2667-45c8-8409-c2dd184c712f",
+      "createdAt": "2021-07-02T16:24:01.374Z",
+      "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4",
+      "isBuiltin": true,
+      "membership": [
+        {
+          "id": "74f770d9-deb0-4159-9ed3-95c1b022a456",
+          "userId": "aad5905e-ea43-49c1-b3a3-84a95d5baef4",
+          "userName": "Alan, an Acme Admin",
+          "createdAt": "2021-07-02T16:24:01.374Z",
+          "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4"
+        }
+      ]
+    },
+    {
+      "id": "a11b6e8b-b265-46c6-be5e-cd1f442abbe2",
+      "name": "All Users",
+      "organizationId": "ac91bb43-2667-45c8-8409-c2dd184c712f",
+      "createdAt": "2021-07-02T16:24:01.374Z",
+      "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4",
+      "isBuiltin": true,
+      "membership": [
+        {
+          "id": "e9e820fc-9efc-4a5b-8170-be0bded4d77d",
+          "userId": "aad5905e-ea43-49c1-b3a3-84a95d5baef4",
+          "userName": "Alan, an Acme Admin",
+          "createdAt": "2021-07-02T16:24:01.374Z",
+          "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4"
+        },
+        {
+          "id": "b3e364dc-c7d0-45dd-9a2c-24ad38edbe5a",
+          "userId": "dda20481-d526-4c63-a90c-d4e1d8b550c5",
+          "userName": "Drew, an Acme Data Analyst",
+          "createdAt": "2021-07-03T16:24:01.374Z",
+          "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4"
+        },
+        {
+          "id": "b5aa363c-7e2f-441a-9919-4f8029d0969f",
+          "userId": "ee9286d6-4ccf-4928-8589-4e4eb82ea1e5",
+          "userName": "Edgar, an Acme Engineer",
+          "createdAt": "2021-07-04T16:24:01.374Z",
+          "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4"
+        }
+      ]
+    },
+    {
+      "id": "dad03760-129b-4b8a-9e03-8f3cd49b0768",
+      "name": "Data Analysts",
+      "organizationId": "ac91bb43-2667-45c8-8409-c2dd184c712f",
+      "createdAt": "2021-07-02T16:24:01.374Z",
+      "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4",
+      "isBuiltin": false,
+      "membership": [
+        {
+          "id": "e6c71177-36a7-457d-bb85-f4d1ab5530f8",
+          "userId": "dda20481-d526-4c63-a90c-d4e1d8b550c5",
+          "userName": "Drew, an Acme Data Analyst",
+          "createdAt": "2021-07-02T18:28:28.024Z",
+          "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4"
+        }
+      ]
+    },
+    {
+      "id": "ee303208-b094-4e3f-ba0b-d86c4778584d",
+      "name": "Engineers",
+      "organizationId": "ac91bb43-2667-45c8-8409-c2dd184c712f",
+      "createdAt": "2021-07-02T16:24:01.374Z",
+      "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4",
+      "isBuiltin": false,
+      "membership": [
+        {
+          "id": "b4a363fe-3333-4300-a8fa-ec89e21bddbd",
+          "userId": "ee9286d6-4ccf-4928-8589-4e4eb82ea1e5",
+          "userName": "Edgar, an Acme Engineer",
+          "createdAt": "2021-07-02T18:29:32.272Z",
+          "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4"
+        }
+      ]
+    },
+    {
+      "id": "ff1e7d91-2e31-49fa-90af-8ee34f507cda",
+      "name": "HR",
+      "organizationId": "ac91bb43-2667-45c8-8409-c2dd184c712f",
+      "createdAt": "2021-07-02T16:24:01.374Z",
+      "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4",
+      "isBuiltin": false,
+      "membership": []
+    },
+    {
+      "id": "cc179bcf-e09a-4fb9-af44-0191bc443417",
+      "name": "Contractors",
+      "organizationId": "ac91bb43-2667-45c8-8409-c2dd184c712f",
+      "createdAt": "2021-07-02T16:24:01.374Z",
+      "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4",
+      "isBuiltin": false,
+      "membership": []
+    }
+  ]
+}

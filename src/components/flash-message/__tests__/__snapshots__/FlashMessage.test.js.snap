@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FlashMessage /> should render a flash message with a cta 1`] = `
+<div
+  class="FlashMessagestyles__Wrapper-sc-7b132e-0 bmyliG"
+  data-testid="wrapper"
+>
+  <span
+    data-testid="label"
+  >
+    Message
+  </span>
+  <button
+    class="Buttonstyles__StyledButton-sc-1uuuyg7-0 KqqqC FlashMessagestyles__StyledButton-sc-7b132e-1 bzDAPJ"
+    data-testid="button"
+    type="button"
+  >
+    <span>
+      Done
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<FlashMessage /> should render a flash message with variant: alert 1`] = `
+<div
+  class="FlashMessagestyles__Wrapper-sc-7b132e-0 kotSkp"
+  data-testid="wrapper"
+>
+  <span
+    data-testid="label"
+  >
+    Message
+  </span>
+</div>
+`;
+
+exports[`<FlashMessage /> should render a flash message with variant: positive 1`] = `
+<div
+  class="FlashMessagestyles__Wrapper-sc-7b132e-0 bZLyiS"
+  data-testid="wrapper"
+>
+  <span
+    data-testid="label"
+  >
+    Message
+  </span>
+</div>
+`;
+
+exports[`<FlashMessage /> should render correctly 1`] = `
+<div
+  class="FlashMessagestyles__Wrapper-sc-7b132e-0 fZtCyI"
+  data-testid="wrapper"
+>
+  <span
+    data-testid="label"
+  >
+    Message
+  </span>
+</div>
+`;

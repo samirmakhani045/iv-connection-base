@@ -1,0 +1,47 @@
+{
+  "page": 1,
+  "pageSize": 100,
+  "totalPages": 1,
+  "totalObjects": 3,
+  "objects": [
+    {
+      "id": "c1",
+      "type": "source",
+      "x": 100,
+      "y": 0,
+      "label": "Salary per city",
+      "settings": {
+        "table": "city_salary",
+        "connection": {
+          "id": "c2a77b07-4a64-428f-9179-cd55bbc21943",
+          "name": "File in S3: city_salary.csv",
+          "type": "csv_url"
+        },
+        "maxRows": null
+      }
+    },
+    {
+      "id": "c2",
+      "type": "formula",
+      "x": 300,
+      "y": 0,
+      "label": "Compute savings per city",
+      "settings": {
+        "newColumnLabel": "Savings",
+        "expression": "Round(Salary * (1 - 0.32 - TaxPercent/100) - CostOfLiving)"
+      }
+    },
+    {
+      "id": "c3",
+      "type": "edge",
+      "from": {
+        "nodeId": "c1",
+        "portId": "o"
+      },
+      "to": {
+        "nodeId": "c2",
+        "portId": "i"
+      }
+    }
+  ]
+}

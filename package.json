@@ -1,0 +1,114 @@
+{
+  "name": "openlytics",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^6.1.2",
+    "@reduxjs/toolkit": "^1.5.1",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
+    "lodash": "^4.17.21",
+    "mock-socket": "^9.0.3",
+    "node-sass": "^6.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "react-resizable": "^3.0.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "redux": "^4.1.0",
+    "styled-components": "^5.3.0",
+    "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "test:quick": "react-scripts test --no-coverage",
+    "test:watch": "react-scripts test --watch",
+    "test:watch:quick": "react-scripts test --watch --no-coverage",
+    "test:coverage": "react-scripts test --watchAll=false --coverage",
+    "test:coverage:watch": "react-scripts test --watch --coverage",
+    "test:report": "opn coverage/lcov-report/index.html",
+    "eject": "react-scripts eject",
+    "lint": "yarn eslint && yarn stylelint",
+    "eslint": "eslint '**/*.js'",
+    "stylelint": "stylelint '**/*.js'",
+    "prettier": "eslint --fix '**/*.js' --ignore-path .gitignore && stylelint '**/*.js' && prettier --write {json,md}",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "//eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@storybook/addon-a11y": "^6.2.9",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-controls": "^6.3.2",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-knobs": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/addon-viewport": "^6.2.9",
+    "@storybook/node-logger": "^6.2.9",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.2.9",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-compat": "^3.9.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "i18next": "^20.3.1",
+    "miragejs": "^0.1.41",
+    "prettier": "^2.3.1",
+    "react-i18next": "^11.11.0",
+    "react-select": "^4.3.1",
+    "storybook-addon-designs": "^6.0.1",
+    "styled-components": "^5.3.0"
+  },
+  "resolutions": {
+    "babel-loader": "8.1.0"
+  },
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@studio/(.+)": "<rootDir>/src/$1",
+      "^@stories/(.+)": "<rootDir>/src/stories/$1",
+      "^@utils/(.+)": "<rootDir>/src/utils/$1"
+    },
+    "coveragePathIgnorePatterns": [
+      "/stories/"
+    ]
+  }
+}

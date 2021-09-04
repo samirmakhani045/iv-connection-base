@@ -1,0 +1,188 @@
+{
+  "page": 1,
+  "pageSize": 100,
+  "totalPages": 1,
+  "totalObjects": 7,
+  "objects": [
+    {
+      "id": "78dd1f64-94c6-4271-9f4a-04cfa18ab6d3",
+      "name": "Connection to RNA MySQL database",
+      "type": "mysql",
+      "organizationId": "ac91bb43-2667-45c8-8409-c2dd184c712f",
+      "createdAt": "2021-07-02T18:49:45.781Z",
+      "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4",
+      "options": {
+        "host": "mysql-rfam-public.ebi.ac.uk",
+        "port": 4497,
+        "user": "rfamro",
+        "password": "",
+        "database": "Rfam"
+      },
+      "isValid": true,
+      "lastValidatedAt": "2021-07-02T18:49:45.781Z",
+      "connectionAccess": [
+        {
+          "id": "1d86d0e8-55c5-485e-af73-ee209d7d2372",
+          "groupId": "a11b6e8b-b265-46c6-be5e-cd1f442abbe2",
+          "groupName": "All Users",
+          "userId": null,
+          "userName": null,
+          "createdAt": "2021-07-02T19:09:38.738Z",
+          "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4"
+        }
+      ]
+    },
+    {
+      "id": "b811fcb8-e3fc-42e1-beae-51ca056b43ac",
+      "name": "Connection to Credit MariaDB",
+      "type": "mariadb",
+      "organizationId": "ac91bb43-2667-45c8-8409-c2dd184c712f",
+      "createdAt": "2021-07-02T18:49:45.781Z",
+      "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4",
+      "options": {
+        "host": "relational.fit.cvut.cz",
+        "port": 3306,
+        "user": "guest",
+        "password": "relational",
+        "database": "Credit"
+      },
+      "isValid": true,
+      "lastValidatedAt": "2021-07-02T18:49:45.781Z",
+      "connectionAccess": [
+        {
+          "id": "dcabe211-3271-46cb-8bfb-27a430f4631e",
+          "groupId": "dad03760-129b-4b8a-9e03-8f3cd49b0768",
+          "groupName": "Data Analysts",
+          "userId": null,
+          "userName": null,
+          "createdAt": "2021-07-02T19:09:38.738Z",
+          "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4"
+        }
+      ]
+    },
+    {
+      "id": "641d280f-0a9a-4ea5-8114-c0e376ec8277",
+      "name": "Drew's personal connection to RNA MySQL database",
+      "type": "mysql",
+      "organizationId": "ac91bb43-2667-45c8-8409-c2dd184c712f",
+      "createdAt": "2021-07-02T18:59:27.099Z",
+      "createdBy": "dda20481-d526-4c63-a90c-d4e1d8b550c5",
+      "options": {
+        "host": "mysql-rfam-public.ebi.ac.uk",
+        "port": 4497,
+        "user": "rfamro",
+        "password": "",
+        "database": "Rfam"
+      },
+      "isValid": true,
+      "lastValidatedAt": "2021-07-02T18:59:27.099Z",
+      "connectionAccess": [
+        {
+          "id": "7f1dea2c-9462-44eb-9a73-8083e744766e",
+          "groupId": null,
+          "groupName": null,
+          "userId": "dda20481-d526-4c63-a90c-d4e1d8b550c5",
+          "userName": "Drew, an Acme Data Analyst",
+          "createdAt": "2021-07-02T19:09:38.738Z",
+          "createdBy": "dda20481-d526-4c63-a90c-d4e1d8b550c5"
+        }
+      ]
+    },
+    {
+      "id": "2555a38b-d44e-454f-b1db-1d557d1c5197",
+      "name": "Drew's personal connection to URL with mortgate loans in CSV format",
+      "type": "csv_url",
+      "organizationId": "ac91bb43-2667-45c8-8409-c2dd184c712f",
+      "createdAt": "2021-07-02T18:59:27.099Z",
+      "createdBy": "dda20481-d526-4c63-a90c-d4e1d8b550c5",
+      "options": {
+        "url": "https://data.ny.gov/api/views/22ew-dxez/rows.csv"
+      },
+      "isValid": true,
+      "lastValidatedAt": "2021-07-02T18:59:27.099Z",
+      "connectionAccess": [
+        {
+          "id": "11d64361-94e7-4a91-bd9d-c057225ae8ed",
+          "groupId": null,
+          "groupName": null,
+          "userId": "dda20481-d526-4c63-a90c-d4e1d8b550c5",
+          "userName": "Drew, an Acme Data Analyst",
+          "createdAt": "2021-07-02T19:09:38.738Z",
+          "createdBy": "dda20481-d526-4c63-a90c-d4e1d8b550c5"
+        }
+      ]
+    },
+    {
+      "id": "c2a77b07-4a64-428f-9179-cd55bbc21943",
+      "name": "File in S3: city_salary.csv",
+      "type": "csv_url",
+      "organizationId": "ac91bb43-2667-45c8-8409-c2dd184c712f",
+      "createdAt": "2021-07-02T18:59:27.099Z",
+      "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4",
+      "options": {
+        "url": "https://op-public-datasets.s3.us-west-1.amazonaws.com/csv-top-cities/city_salary.csv"
+      },
+      "isValid": true,
+      "lastValidatedAt": "2021-07-02T18:59:27.099Z",
+      "connectionAccess": [
+        {
+          "id": "20ba47b5-7829-40f6-8497-1972d33f0475",
+          "groupId": "a11b6e8b-b265-46c6-be5e-cd1f442abbe2",
+          "groupName": "All Users",
+          "userId": null,
+          "userName": null,
+          "createdAt": "2021-07-02T19:09:38.738Z",
+          "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4"
+        }
+      ]
+    },
+    {
+      "id": "1c68a2db-825b-4c57-a473-34c8ed97a5dd",
+      "name": "File in S3: city_cost.csv",
+      "type": "csv_url",
+      "organizationId": "ac91bb43-2667-45c8-8409-c2dd184c712f",
+      "createdAt": "2021-07-02T18:59:27.099Z",
+      "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4",
+      "options": {
+        "url": "https://op-public-datasets.s3.us-west-1.amazonaws.com/csv-top-cities/city_cost.csv"
+      },
+      "isValid": true,
+      "lastValidatedAt": "2021-07-02T18:59:27.099Z",
+      "connectionAccess": [
+        {
+          "id": "41f9da8a-d736-4282-b717-1f59ce875f22",
+          "groupId": "a11b6e8b-b265-46c6-be5e-cd1f442abbe2",
+          "groupName": "All Users",
+          "userId": null,
+          "userName": null,
+          "createdAt": "2021-07-02T19:09:38.738Z",
+          "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4"
+        }
+      ]
+    },
+    {
+      "id": "e8d995b3-ad7d-464d-9791-f6198436af48",
+      "name": "File in S3: state_tax.csv",
+      "type": "csv_url",
+      "organizationId": "ac91bb43-2667-45c8-8409-c2dd184c712f",
+      "createdAt": "2021-07-02T18:59:27.099Z",
+      "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4",
+      "options": {
+        "url": "https://op-public-datasets.s3.us-west-1.amazonaws.com/csv-top-cities/state_tax.csv"
+      },
+      "isValid": true,
+      "lastValidatedAt": "2021-07-02T18:59:27.099Z",
+      "connectionAccess": [
+        {
+          "id": "4ab464d8-fc0e-4338-96a2-719a279963dd",
+          "groupId": "a11b6e8b-b265-46c6-be5e-cd1f442abbe2",
+          "groupName": "All Users",
+          "userId": null,
+          "userName": null,
+          "createdAt": "2021-07-02T19:09:38.738Z",
+          "createdBy": "aad5905e-ea43-49c1-b3a3-84a95d5baef4"
+        }
+      ]
+    }
+  ]
+}

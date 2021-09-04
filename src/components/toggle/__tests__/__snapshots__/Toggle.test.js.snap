@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toggle /> should render a checked toggle 1`] = `
+<div
+  class="Togglestyles__Container-ku0wh7-0 jxlaHN"
+  data-testid="container"
+  disabled=""
+>
+  <label
+    class="Togglestyles__Label-ku0wh7-2 hCTgVf"
+    disabled=""
+  >
+    <input
+      checked=""
+      class="Togglestyles__Input-ku0wh7-1 gsgTNP"
+      data-testid="toggle"
+      disabled=""
+      type="checkbox"
+      value=""
+    />
+  </label>
+  <div
+    class="Togglestyles__Thumb-ku0wh7-3 tYcUG"
+  />
+</div>
+`;
+
+exports[`<Toggle /> should render a disabled and checked toggle 1`] = `
+<div
+  class="Togglestyles__Container-ku0wh7-0 jxlaHN"
+  data-testid="container"
+  disabled=""
+>
+  <label
+    class="Togglestyles__Label-ku0wh7-2 hCTgVf"
+    disabled=""
+  >
+    <input
+      checked=""
+      class="Togglestyles__Input-ku0wh7-1 gsgTNP"
+      data-testid="toggle"
+      disabled=""
+      type="checkbox"
+      value=""
+    />
+  </label>
+  <div
+    class="Togglestyles__Thumb-ku0wh7-3 tYcUG"
+  />
+</div>
+`;
+
+exports[`<Toggle /> should render a disabled toggle 1`] = `
+<div
+  class="Togglestyles__Container-ku0wh7-0 jxlaHN"
+  data-testid="container"
+  disabled=""
+>
+  <label
+    class="Togglestyles__Label-ku0wh7-2 hCTgVf"
+    disabled=""
+  >
+    <input
+      checked=""
+      class="Togglestyles__Input-ku0wh7-1 gsgTNP"
+      data-testid="toggle"
+      disabled=""
+      type="checkbox"
+      value=""
+    />
+  </label>
+  <div
+    class="Togglestyles__Thumb-ku0wh7-3 tYcUG"
+  />
+</div>
+`;
+
+exports[`<Toggle /> should render correctly 1`] = `
+<div
+  class="Togglestyles__Container-ku0wh7-0 jxlaHN"
+  data-testid="container"
+  disabled=""
+>
+  <label
+    class="Togglestyles__Label-ku0wh7-2 hCTgVf"
+    disabled=""
+  >
+    <input
+      checked=""
+      class="Togglestyles__Input-ku0wh7-1 gsgTNP"
+      data-testid="toggle"
+      disabled=""
+      type="checkbox"
+      value=""
+    />
+  </label>
+  <div
+    class="Togglestyles__Thumb-ku0wh7-3 tYcUG"
+  />
+</div>
+`;

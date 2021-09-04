@@ -1,0 +1,388 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DashboardSidebar /> should render correctly 1`] = `
+<div
+  class="DashboardSidebarstyles__Wrapper-sc-1pttvb0-0 fsdKEu"
+  data-testid="dashboardSidebarWrapper"
+>
+  <div
+    class="DashboardSidebarstyles__SidebarMenuWrapper-sc-1pttvb0-1 lkTMID"
+  >
+    <div
+      class="DashboardSidebarstyles__SidebarHeader-sc-1pttvb0-2 ibvaeS"
+    >
+      <img
+        alt=""
+        class="DashboardSidebarstyles__HeaderImage-sc-1pttvb0-3 DYxKL"
+        src=""
+      />
+      <div
+        class="DashboardSidebarstyles__HeaderTitle-sc-1pttvb0-4 iLQqKK"
+      />
+    </div>
+    <nav
+      data-testid="menuWrapper"
+    >
+      <ul
+        class="SidebarMenustyles__Ul-sc-1iw9ukl-0 egdKjP"
+      >
+        <li
+          class="SidebarMenustyles__Li-sc-1iw9ukl-1 UPQfR"
+        >
+          <div
+            class="SidebarMenustyles__LiWrapper-sc-1iw9ukl-2 eFXYtm"
+          >
+            <div
+              class="Iconstyles__IconWrapper-sc-1ghvgbo-0 ipHglB SidebarMenustyles__StyledIcon-sc-1iw9ukl-3 lhHamY"
+              data-testid="wrapper"
+              size="16"
+            >
+              <svg
+                data-testid="icon"
+                fill="#313336"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M12 6.5C9.51 6.5 8 8.52 8 11V17H16V11C16 8.52 14.49 6.5 12 6.5Z"
+                  opacity="0.3"
+                />
+                <path
+                  d="M18 16V11C18 7.93 16.37 5.36 13.5 4.68V4C13.5 3.17 12.83 2.5 12 2.5C11.17 2.5 10.5 3.17 10.5 4V4.68C7.64 5.36 6 7.92 6 11V16L4 18V19H20V18L18 16ZM16 17H8V11C8 8.52 9.51 6.5 12 6.5C14.49 6.5 16 8.52 16 11V17ZM12 22C13.1 22 14 21.1 14 20H10C10 21.1 10.9 22 12 22Z"
+                />
+              </svg>
+            </div>
+            <span>
+              Notifications
+            </span>
+            <div
+              class="SidebarMenustyles__Badge-sc-1iw9ukl-6 cFGumP"
+            >
+              1
+            </div>
+          </div>
+        </li>
+        <li
+          class="SidebarMenustyles__Li-sc-1iw9ukl-1 ERNEt"
+        >
+          <div
+            class="SidebarMenustyles__LiWrapper-sc-1iw9ukl-2 eFXYtm"
+          >
+            <div
+              class="Iconstyles__IconWrapper-sc-1ghvgbo-0 ipHglB SidebarMenustyles__StyledIcon-sc-1iw9ukl-3 lhHamY"
+              data-testid="wrapper"
+              size="16"
+            >
+              <svg
+                data-testid="icon"
+                fill="#313336"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <g
+                  transform="translate(2.000000, 6.000000)"
+                >
+                  <polygon
+                    points="4 2.66668 4 1.33334 7.66667 1.33334 7.66667 2.66668"
+                  />
+                  <path
+                    d="M9.3334,2.66667 C9.7016,2.66667 10,2.36819 10,2 C10,1.63181 9.7016,1.33333 9.3334,1.33333 C8.9652,1.33333 8.6667,1.63181 8.6667,2 C8.6667,2.36819 8.9652,2.66667 9.3334,2.66667 Z M9.3334,4 C10.4379,4 11.3334,3.10457 11.3334,2 C11.3334,0.89543 10.4379,0 9.3334,0 C8.2288,0 7.33337,0.89543 7.33337,2 C7.33337,3.10457 8.2288,4 9.3334,4 Z"
+                  />
+                  <path
+                    d="M2.66669,2.66667 C3.03488,2.66667 3.33335,2.36819 3.33335,2 C3.33335,1.63181 3.03488,1.33333 2.66669,1.33333 C2.2985,1.33333 2.00002,1.63181 2.00002,2 C2.00002,2.36819 2.2985,2.66667 2.66669,2.66667 Z M2.66669,4 C3.77126,4 4.66669,3.10457 4.66669,2 C4.66669,0.89543 3.77126,0 2.66669,0 C1.56212,0 0.66669,0.89543 0.66669,2 C0.66669,3.10457 1.56212,4 2.66669,4 Z"
+                  />
+                </g>
+              </svg>
+            </div>
+            <span>
+              Flow
+            </span>
+          </div>
+          <ul
+            class="SidebarMenustyles__Ul-sc-1iw9ukl-0 egdKjP"
+          >
+            <li
+              class="SidebarMenustyles__Li-sc-1iw9ukl-1 UPQfR"
+            >
+              <div
+                class="SidebarMenustyles__LiWrapper-sc-1iw9ukl-2 eFXYtm"
+              >
+                <div
+                  class="SidebarMenustyles__IconFill-sc-1iw9ukl-4 ddqyGO"
+                  fill="#E93A5A"
+                />
+                <span>
+                  Only Me
+                </span>
+              </div>
+            </li>
+            <li
+              class="SidebarMenustyles__Li-sc-1iw9ukl-1 UPQfR"
+            >
+              <div
+                class="SidebarMenustyles__LiWrapper-sc-1iw9ukl-2 eFXYtm"
+              >
+                <div
+                  class="SidebarMenustyles__IconFill-sc-1iw9ukl-4 cfflnI"
+                  fill="#262727"
+                />
+                <span>
+                  Only Me
+                </span>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li
+          class="SidebarMenustyles__Li-sc-1iw9ukl-1 UPQfR"
+        >
+          <div
+            class="SidebarMenustyles__LiWrapper-sc-1iw9ukl-2 krvyHS"
+          >
+            <div
+              class="Iconstyles__IconWrapper-sc-1ghvgbo-0 ipHglB SidebarMenustyles__StyledIcon-sc-1iw9ukl-3 lhHamY"
+              data-testid="wrapper"
+              size="16"
+            >
+              <svg
+                data-testid="icon"
+                fill="#798B9B"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M9 10C10.1046 10 11 9.10457 11 8C11 6.89543 10.1046 6 9 6C7.89543 6 7 6.89543 7 8C7 9.10457 7.89543 10 9 10Z"
+                  opacity="0.3"
+                />
+                <path
+                  d="M9 15C6.3 15 3.2 16.29 3 17.01V18H15V17C14.8 16.29 11.7 15 9 15Z"
+                  opacity="0.3"
+                />
+                <path
+                  d="M16.67 13.13C18.04 14.06 19 15.32 19 17V20H23V17C23 14.82 19.43 13.53 16.67 13.13Z"
+                />
+                <path
+                  d="M15 12C17.21 12 19 10.21 19 8C19 5.79 17.21 4 15 4C14.53 4 14.09 4.1 13.67 4.24C14.5 5.27 15 6.58 15 8C15 9.42 14.5 10.73 13.67 11.76C14.09 11.9 14.53 12 15 12Z"
+                />
+                <path
+                  d="M9 12C11.21 12 13 10.21 13 8C13 5.79 11.21 4 9 4C6.79 4 5 5.79 5 8C5 10.21 6.79 12 9 12ZM9 6C10.1 6 11 6.9 11 8C11 9.1 10.1 10 9 10C7.9 10 7 9.1 7 8C7 6.9 7.9 6 9 6Z"
+                />
+                <path
+                  d="M9 13C6.33 13 1 14.34 1 17V20H17V17C17 14.34 11.67 13 9 13ZM15 18H3V17.01C3.2 16.29 6.3 15 9 15C11.7 15 14.8 16.29 15 17V18Z"
+                />
+              </svg>
+            </div>
+            <span>
+              Groups
+            </span>
+            <div
+              class="SidebarMenustyles__Pill-sc-1iw9ukl-5 idQSTb"
+            >
+              Coming soon
+            </div>
+          </div>
+        </li>
+        <li
+          class="SidebarMenustyles__Li-sc-1iw9ukl-1 UPQfR"
+        >
+          <div
+            class="SidebarMenustyles__LiWrapper-sc-1iw9ukl-2 eFXYtm"
+          >
+            <div
+              class="Iconstyles__IconWrapper-sc-1ghvgbo-0 ipHglB SidebarMenustyles__StyledIcon-sc-1iw9ukl-3 lhHamY"
+              data-testid="wrapper"
+              size="16"
+            >
+              <svg
+                data-testid="icon"
+                fill="#313336"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M5 5H20V8H5V5ZM17 10H20V19H17V10ZM10 10H15V19H10V10ZM5 10H8V19H5V10Z"
+                  opacity="0.3"
+                />
+                <path
+                  d="M20 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H20C21.1 21 22 20.1 22 19V5C22 3.9 21.1 3 20 3ZM8 19H5V10H8V19ZM15 19H10V10H15V19ZM20 19H17V10H20V19ZM20 8H5V5H20V8Z"
+                />
+              </svg>
+            </div>
+            <span>
+              Connections
+            </span>
+          </div>
+        </li>
+        <li
+          class="SidebarMenustyles__Li-sc-1iw9ukl-1 UPQfR"
+        >
+          <div
+            class="SidebarMenustyles__LiWrapper-sc-1iw9ukl-2 eFXYtm"
+          >
+            <div
+              class="Iconstyles__IconWrapper-sc-1ghvgbo-0 ipHglB SidebarMenustyles__StyledIcon-sc-1iw9ukl-3 lhHamY"
+              data-testid="wrapper"
+              size="16"
+            >
+              <svg
+                data-testid="icon"
+                fill="#313336"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M19.28 8.6L18.58 7.39L17.31 7.9L16.25 8.33L15.34 7.63C14.95 7.33 14.54 7.09 14.11 6.92L13.05 6.49L12.89 5.36L12.7 4H11.3L11.11 5.35L10.95 6.48L9.89 6.92C9.48 7.09 9.07 7.33 8.64 7.65L7.74 8.33L6.69 7.91L5.42 7.39L4.72 8.6L5.8 9.44L6.69 10.14L6.55 11.27C6.52 11.57 6.5 11.8 6.5 12C6.5 12.2 6.52 12.43 6.55 12.73L6.69 13.86L5.8 14.56L4.72 15.4L5.42 16.61L6.69 16.1L7.75 15.67L8.66 16.37C9.05 16.67 9.46 16.91 9.89 17.08L10.95 17.51L11.11 18.64L11.3 20H12.69L12.88 18.65L13.04 17.52L14.1 17.09C14.51 16.92 14.92 16.68 15.35 16.36L16.25 15.68L17.29 16.1L18.56 16.61L19.26 15.4L18.18 14.56L17.29 13.86L17.43 12.73C17.47 12.42 17.48 12.21 17.48 12C17.48 11.79 17.46 11.57 17.43 11.27L17.29 10.14L18.18 9.44L19.28 8.6ZM12 16C9.79 16 8 14.21 8 12C8 9.79 9.79 8 12 8C14.21 8 16 9.79 16 12C16 14.21 14.21 16 12 16Z"
+                  opacity="0.3"
+                />
+                <path
+                  d="M19.43 12.98C19.47 12.66 19.5 12.34 19.5 12C19.5 11.66 19.47 11.34 19.43 11.02L21.54 9.37C21.73 9.22 21.78 8.95 21.66 8.73L19.66 5.27C19.57 5.11 19.4 5.02 19.22 5.02C19.16 5.02 19.1 5.03 19.05 5.05L16.56 6.05C16.04 5.65 15.48 5.32 14.87 5.07L14.49 2.42C14.46 2.18 14.25 2 14 2H10C9.75 2 9.54 2.18 9.51 2.42L9.13 5.07C8.52 5.32 7.96 5.66 7.44 6.05L4.95 5.05C4.89 5.03 4.83 5.02 4.77 5.02C4.6 5.02 4.43 5.11 4.34 5.27L2.34 8.73C2.21 8.95 2.27 9.22 2.46 9.37L4.57 11.02C4.53 11.34 4.5 11.67 4.5 12C4.5 12.33 4.53 12.66 4.57 12.98L2.46 14.63C2.27 14.78 2.22 15.05 2.34 15.27L4.34 18.73C4.43 18.89 4.6 18.98 4.78 18.98C4.84 18.98 4.9 18.97 4.95 18.95L7.44 17.95C7.96 18.35 8.52 18.68 9.13 18.93L9.51 21.58C9.54 21.82 9.75 22 10 22H14C14.25 22 14.46 21.82 14.49 21.58L14.87 18.93C15.48 18.68 16.04 18.34 16.56 17.95L19.05 18.95C19.11 18.97 19.17 18.98 19.23 18.98C19.4 18.98 19.57 18.89 19.66 18.73L21.66 15.27C21.78 15.05 21.73 14.78 21.54 14.63L19.43 12.98ZM17.45 11.27C17.49 11.58 17.5 11.79 17.5 12C17.5 12.21 17.48 12.43 17.45 12.73L17.31 13.86L18.2 14.56L19.28 15.4L18.58 16.61L17.31 16.1L16.27 15.68L15.37 16.36C14.94 16.68 14.53 16.92 14.12 17.09L13.06 17.52L12.9 18.65L12.7 20H11.3L11.11 18.65L10.95 17.52L9.89 17.09C9.46 16.91 9.06 16.68 8.66 16.38L7.75 15.68L6.69 16.11L5.42 16.62L4.72 15.41L5.8 14.57L6.69 13.87L6.55 12.74C6.52 12.43 6.5 12.2 6.5 12C6.5 11.8 6.52 11.57 6.55 11.27L6.69 10.14L5.8 9.44L4.72 8.6L5.42 7.39L6.69 7.9L7.73 8.32L8.63 7.64C9.06 7.32 9.47 7.08 9.88 6.91L10.94 6.48L11.1 5.35L11.3 4H12.69L12.88 5.35L13.04 6.48L14.1 6.91C14.53 7.09 14.93 7.32 15.33 7.62L16.24 8.32L17.3 7.89L18.57 7.38L19.27 8.59L18.2 9.44L17.31 10.14L17.45 11.27ZM12 8C9.79 8 8 9.79 8 12C8 14.21 9.79 16 12 16C14.21 16 16 14.21 16 12C16 9.79 14.21 8 12 8ZM12 14C10.9 14 10 13.1 10 12C10 10.9 10.9 10 12 10C13.1 10 14 10.9 14 12C14 13.1 13.1 14 12 14Z"
+                />
+              </svg>
+            </div>
+            <span>
+              My Preferences
+            </span>
+          </div>
+        </li>
+        <li
+          class="SidebarMenustyles__Li-sc-1iw9ukl-1 UPQfR"
+        >
+          <div
+            class="SidebarMenustyles__LiWrapper-sc-1iw9ukl-2 eFXYtm"
+          >
+            <div
+              class="Iconstyles__IconWrapper-sc-1ghvgbo-0 ipHglB SidebarMenustyles__StyledIcon-sc-1iw9ukl-3 lhHamY"
+              data-testid="wrapper"
+              size="16"
+            >
+              <svg
+                data-testid="icon"
+                fill="#313336"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M20 2H4C2.9 2 2 2.9 2 4V16C2 17.1 2.9 18 4 18H18L22 22V4C22 2.9 21.1 2 20 2ZM20 17.17L18.83 16H4V4H20V17.17Z"
+                />
+                <path
+                  d="M4 4V16H18.83L20 17.17V4H4Z"
+                  opacity="0.3"
+                />
+              </svg>
+            </div>
+            <span>
+              Feedback
+            </span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div
+    data-testid="wrapper"
+  >
+    <p
+      class="SidebarFooterstyles__Title-sc-7jmd2j-0 fWRSdH"
+    >
+      Invite new groupmates
+    </p>
+    <p
+      class="SidebarFooterstyles__P-sc-7jmd2j-1 dJkCpp"
+    >
+      When joining, your invites will join Openlytics as a members of your team.
+    </p>
+    <button
+      class="Buttonstyles__StyledButton-sc-1uuuyg7-0 jPrzzZ SidebarFooterstyles__StyledButton-sc-7jmd2j-2 nVHiT"
+      data-testid="button"
+      type="button"
+    >
+      <div
+        class="Iconstyles__IconWrapper-sc-1ghvgbo-0 ipHglB Buttonstyles__StyledIcon-sc-1uuuyg7-1 fWCKUg"
+        data-testid="buttonIcon"
+        size="16"
+      >
+        <div
+          class="Logostyles__Wrapper-dqhxzu-1 cwSsQh"
+        >
+          <svg
+            data-testid="logo"
+            height="1em"
+            viewBox="0 0 32 32"
+            width="1em"
+          >
+            <g
+              clip-path="url(#clip0)"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M4 12.7091C6.824 13.4067 9.14792 13.2323 10.9718 12.1858C13.7075 10.6162 15.2759 8 19.7968 8C24.3176 8 28 11.3939 28 16.3717H24.462C24.4706 13.4825 22.4603 11.4882 19.7085 11.4882C16.9567 11.4882 16.1625 13.0658 14.59 14.0172C13.0176 14.9685 10.9076 15.4283 8.942 15.238C7.99594 15.1464 6.58667 14.7378 5.412 13.93C5.11043 13.7226 4.63976 13.3156 4 12.7091Z"
+                fill="url(#paint0_linear)"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M4 19.9995C6.824 19.3019 9.14792 19.4763 10.9718 20.5227C13.7075 22.0924 15.2759 24.7086 19.7968 24.7086C24.3176 24.7086 28 21.3147 28 16.3369H24.462C24.4706 19.2261 22.4603 21.2204 19.7085 21.2204C16.9567 21.2204 16.1625 19.6428 14.59 18.6914C13.0176 17.7401 10.9076 17.2803 8.942 17.4706C7.99594 17.5621 6.58667 17.9708 5.412 18.7786C5.11043 18.986 4.63976 19.393 4 19.9995Z"
+                fill="url(#paint1_linear)"
+                fill-rule="evenodd"
+              />
+            </g>
+            <defs>
+              <lineargradient
+                gradientUnits="userSpaceOnUse"
+                id="paint0_linear"
+                x1="8.7712"
+                x2="16.631"
+                y1="15.8203"
+                y2="15.8203"
+              >
+                <stop
+                  stop-color="#EDD745"
+                />
+                <stop
+                  offset="1"
+                  stop-color="#E93A5A"
+                />
+              </lineargradient>
+              <lineargradient
+                gradientUnits="userSpaceOnUse"
+                id="paint1_linear"
+                x1="8.7712"
+                x2="16.631"
+                y1="16.8883"
+                y2="16.8883"
+              >
+                <stop
+                  stop-color="#EDD745"
+                />
+                <stop
+                  offset="1"
+                  stop-color="#E93A5A"
+                />
+              </lineargradient>
+              <clippath
+                id="clip0"
+              >
+                <rect
+                  fill="white"
+                  height="16.7086"
+                  transform="translate(4 8)"
+                  width="24"
+                />
+              </clippath>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <span>
+        Invite to Openlytics
+      </span>
+    </button>
+  </div>
+</div>
+`;

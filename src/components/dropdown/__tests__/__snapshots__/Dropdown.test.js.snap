@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dropdown /> should render a disabled dropdown 1`] = `
+<div
+  class="Dropdownstyles__Wrapper-evishe-0 hGkWrh"
+  data-testid="dropdown"
+  disabled=""
+>
+  <div
+    class=" css-14jk2my-container"
+  >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="css-1f43avz-a11yText-A11yText"
+    />
+    <div
+      class=" css-1wzx6za-Control"
+    >
+      <div
+        class=" css-wx473i-ValueContainer"
+      >
+        <div
+          class=" css-1xk0z9w-SingleValue"
+        >
+          <div
+            class="DropdownComponentsstyles__IconWrapper-sc-1uiyezv-2 gbFrsL"
+            data-testid="dropdownValueContainerIcon"
+          >
+            <div
+              class="DropdownComponentsstyles__NoIcon-sc-1uiyezv-3 jbuDVa"
+            />
+          </div>
+          <div
+            class=" css-1onk2zo-Placeholder"
+          >
+            Select
+          </div>
+          <input
+            aria-autocomplete="list"
+            class="css-wmatm6-dummyInput-DummyInput"
+            disabled=""
+            id="react-select-3-input"
+            readonly=""
+            tabindex="0"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class=" css-ar9wxe-IndicatorsContainer"
+      >
+        <svg
+          data-testid="dropdownIndicatorsContainerDisabled"
+          fill="#798B9B"
+          height="1em"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M6 20H18V10H6V20ZM12 13C13.1 13 14 13.9 14 15C14 16.1 13.1 17 12 17C10.9 17 10 16.1 10 15C10 13.9 10.9 13 12 13Z"
+            opacity="0.3"
+          />
+          <path
+            d="M18 8H17V6C17 3.24 14.76 1 12 1C9.24 1 7 3.24 7 6V8H6C4.9 8 4 8.9 4 10V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V10C20 8.9 19.1 8 18 8ZM9 6C9 4.34 10.34 3 12 3C13.66 3 15 4.34 15 6V8H9V6ZM18 20H6V10H18V20ZM12 17C13.1 17 14 16.1 14 15C14 13.9 13.1 13 12 13C10.9 13 10 13.9 10 15C10 16.1 10.9 17 12 17Z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Dropdown /> should render a dropdown with error 1`] = `
+<div
+  class="Dropdownstyles__Wrapper-evishe-0 Zbgxb"
+  data-testid="dropdown"
+>
+  <div
+    class=" css-2b097c-container"
+  >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="css-1f43avz-a11yText-A11yText"
+    />
+    <div
+      class=" css-1wzx6za-Control"
+    >
+      <div
+        class=" css-3xifye-ValueContainer"
+      >
+        <div
+          class=" css-1xk0z9w-SingleValue"
+        >
+          <div
+            class="DropdownComponentsstyles__IconWrapper-sc-1uiyezv-2 gbFrsL"
+            data-testid="dropdownValueContainerIcon"
+          >
+            <div
+              class="DropdownComponentsstyles__NoIcon-sc-1uiyezv-3 jbuDVa"
+            />
+          </div>
+          <div
+            class=" css-1pa6nd8-Placeholder"
+          >
+            Select
+          </div>
+          <input
+            aria-autocomplete="list"
+            class="css-wmatm6-dummyInput-DummyInput"
+            id="react-select-4-input"
+            readonly=""
+            tabindex="0"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class=" css-ar9wxe-IndicatorsContainer"
+      >
+        <svg
+          data-testid="dropdownIndicatorsContainerIcon"
+          fill="#798B9B"
+          height="1em"
+          transform="rotate(90)"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M9.29492 16.885L13.8749 12.295L9.29492 7.70498L10.7049 6.29498L16.7049 12.295L10.7049 18.295L9.29492 16.885Z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Dropdown /> should render correctly 1`] = `
+<div
+  class="Dropdownstyles__Wrapper-evishe-0 dtiazv"
+  data-testid="dropdown"
+>
+  <div
+    class=" css-2b097c-container"
+  >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="css-1f43avz-a11yText-A11yText"
+    />
+    <div
+      class=" css-1wzx6za-Control"
+    >
+      <div
+        class=" css-3xifye-ValueContainer"
+      >
+        <div
+          class=" css-1xk0z9w-SingleValue"
+        >
+          <div
+            class="DropdownComponentsstyles__IconWrapper-sc-1uiyezv-2 gbFrsL"
+            data-testid="dropdownValueContainerIcon"
+          >
+            <div
+              class="DropdownComponentsstyles__NoIcon-sc-1uiyezv-3 jbuDVa"
+            />
+          </div>
+          <div
+            class=" css-1pa6nd8-Placeholder"
+          >
+            Select
+          </div>
+          <input
+            aria-autocomplete="list"
+            class="css-wmatm6-dummyInput-DummyInput"
+            id="react-select-2-input"
+            readonly=""
+            tabindex="0"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class=" css-ar9wxe-IndicatorsContainer"
+      >
+        <svg
+          data-testid="dropdownIndicatorsContainerIcon"
+          fill="#798B9B"
+          height="1em"
+          transform="rotate(90)"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M9.29492 16.885L13.8749 12.295L9.29492 7.70498L10.7049 6.29498L16.7049 12.295L10.7049 18.295L9.29492 16.885Z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;

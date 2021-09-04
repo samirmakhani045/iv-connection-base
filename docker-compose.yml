@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  playground:
+    container_name: "playground"
+    hostname: "playground"
+    build: "."
+    restart: "always"
+    ports:
+      - "3000:3000"
+      - "8000:8000"
+    volumes:
+      # shared volumes, to facilitate interactive development
+      - ".:/volumes/playground"

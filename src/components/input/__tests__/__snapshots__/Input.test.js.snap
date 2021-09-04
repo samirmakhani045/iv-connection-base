@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should display an error message 1`] = `
+<div
+  class="Inputstyles__Wrapper-sc-1mcot6p-0 MKIHn"
+  data-testid="wrapper"
+>
+  <label
+    class="Inputstyles__Label-sc-1mcot6p-1 cGGdri"
+    for="test"
+    id="test-label"
+  >
+    <input
+      aria-describedby="test-error"
+      aria-invalid="true"
+      aria-labelledby="test-label"
+      class="Inputstyles__StyledInput-sc-1mcot6p-4 hpdgNO"
+      data-testid="input"
+      id="test"
+      type="text"
+      value=""
+    />
+    <span
+      class="Inputstyles__Span-sc-1mcot6p-2 iywYCO"
+      data-testid="inputLabel"
+    >
+      Label
+    </span>
+  </label>
+  <div
+    class="Inputstyles__Error-sc-1mcot6p-5 ifvZfE"
+    data-testid="inputError"
+    id="test-error"
+  >
+    Error
+  </div>
+</div>
+`;
+
+exports[`<Input /> should render a label, value and icon 1`] = `
+<div
+  class="Inputstyles__Wrapper-sc-1mcot6p-0 MKIHn"
+  data-testid="wrapper"
+>
+  <label
+    class="Inputstyles__Label-sc-1mcot6p-1 cGGdri"
+    for="test"
+    id="test-label"
+  >
+    <input
+      aria-invalid="false"
+      aria-labelledby="test-label"
+      class="Inputstyles__StyledInput-sc-1mcot6p-4 jvlSCZ"
+      data-testid="input"
+      id="test"
+      type="text"
+      value="test"
+    />
+    <span
+      class="Inputstyles__Span-sc-1mcot6p-2 ktnSuP"
+      data-testid="inputLabel"
+    >
+      Label
+    </span>
+    <div
+      class="Iconstyles__IconWrapper-sc-1ghvgbo-0 jMuoDZ Inputstyles__StyledIcon-sc-1mcot6p-3 kXuUVb"
+      data-testid="inputIcon"
+      size="12"
+    >
+      <svg
+        data-testid="icon"
+        fill="#313336"
+        height="1em"
+        viewBox="0 0 24 24"
+        width="1em"
+      >
+        <path
+          d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"
+        />
+      </svg>
+    </div>
+  </label>
+</div>
+`;
+
+exports[`<Input /> should render correctly 1`] = `
+<div
+  class="Inputstyles__Wrapper-sc-1mcot6p-0 MKIHn"
+  data-testid="wrapper"
+>
+  <label
+    class="Inputstyles__Label-sc-1mcot6p-1 cGGdri"
+    for="test"
+    id="test-label"
+  >
+    <input
+      aria-invalid="false"
+      aria-labelledby="test-label"
+      class="Inputstyles__StyledInput-sc-1mcot6p-4 gXtDrl"
+      data-testid="input"
+      id="test"
+      type="text"
+      value=""
+    />
+    <span
+      class="Inputstyles__Span-sc-1mcot6p-2 eXpXFQ"
+      data-testid="inputLabel"
+    >
+      Label
+    </span>
+  </label>
+</div>
+`;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DashboardHeader /> should render correctly 1`] = `
+<div
+  class="DashboardHeaderstyles__Wrapper-sc-1in23sz-0 cfrswK"
+  data-testid="wrapper"
+>
+  <h1
+    class="DashboardHeaderstyles__H1-sc-1in23sz-1 gYxHqX"
+  >
+    Title
+  </h1>
+</div>
+`;

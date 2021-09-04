@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should render a button with variant: dark 1`] = `
+<button
+  class="Buttonstyles__StyledButton-sc-1uuuyg7-0 iIsqkL"
+  data-testid="button"
+  type="button"
+>
+  <span>
+    button
+  </span>
+</button>
+`;
+
+exports[`<Button /> should render a button with variant: light 1`] = `
+<button
+  class="Buttonstyles__StyledButton-sc-1uuuyg7-0 jPrzzZ"
+  data-testid="button"
+  type="button"
+>
+  <span>
+    button
+  </span>
+</button>
+`;
+
+exports[`<Button /> should render a disabled button 1`] = `
+<button
+  class="Buttonstyles__StyledButton-sc-1uuuyg7-0 sokVo"
+  data-testid="button"
+  disabled=""
+  type="button"
+>
+  <span>
+    button
+  </span>
+</button>
+`;
+
+exports[`<Button /> should render a disabled button with variant: dark 1`] = `
+<button
+  class="Buttonstyles__StyledButton-sc-1uuuyg7-0 iLIhvI"
+  data-testid="button"
+  disabled=""
+  type="button"
+>
+  <span>
+    button
+  </span>
+</button>
+`;
+
+exports[`<Button /> should render a disabled button with variant: ghost 1`] = `
+<button
+  class="Buttonstyles__StyledButton-sc-1uuuyg7-0 cFFbDy"
+  data-testid="button"
+  type="button"
+>
+  <span>
+    button
+  </span>
+</button>
+`;
+
+exports[`<Button /> should render a disabled button with variant: light 1`] = `
+<button
+  class="Buttonstyles__StyledButton-sc-1uuuyg7-0 dBWqvB"
+  data-testid="button"
+  disabled=""
+  type="button"
+>
+  <span>
+    button
+  </span>
+</button>
+`;
+
+exports[`<Button /> should render a small button 1`] = `
+<button
+  class="Buttonstyles__StyledButton-sc-1uuuyg7-0 eZirey"
+  data-testid="button"
+  type="button"
+>
+  <span>
+    button
+  </span>
+</button>
+`;
+
+exports[`<Button /> should render button with the icon on the right 1`] = `
+<button
+  class="Buttonstyles__StyledButton-sc-1uuuyg7-0 dQPQGE"
+  data-testid="button"
+  type="button"
+>
+  <span>
+    button
+  </span>
+</button>
+`;
+
+exports[`<Button /> should render correctly 1`] = `
+<button
+  class="Buttonstyles__StyledButton-sc-1uuuyg7-0 bhfzyd"
+  data-testid="button"
+  type="button"
+>
+  <span>
+    button
+  </span>
+</button>
+`;
