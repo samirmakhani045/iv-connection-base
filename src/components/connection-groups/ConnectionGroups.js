@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import './ConnectionGroups.scss';
+import SelectedImage from '@studio/utils/selectedImage';
+
 import Button from '../button/Button';
 
 const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) => {
@@ -16,26 +18,7 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
       <div className="top">
         <div className="topgroup">
           <div>
-            {connectionType === 'snowflake' && (
-              <div>
-                <img className="input-images" src="images/snowflake-icon.png" alt="snowflake" />
-              </div>
-            )}
-            {connectionType === 'github' && (
-              <div>
-                <img className="input-images" src="images/github-icon.png" alt="github" />
-              </div>
-            )}
-            {connectionType === 'postgreSql' && (
-              <div>
-                <img className="input-images" src="images/postgresql-icon.png" alt="postgreSql" />
-              </div>
-            )}
-            {connectionType === 'mySql' && (
-              <div>
-                <img className="input-images" src="images/mysql-icon.png" alt="mySql" />
-              </div>
-            )}
+            <SelectedImage connectionType={connectionType} />
           </div>
           <div className="database-text">
             <span>My database name</span>

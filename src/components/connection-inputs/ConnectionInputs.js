@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import SelectedImage from '@studio/utils/selectedImage';
+
 import Input from '../input/Input';
 import Button from '../button/Button';
 
@@ -10,7 +12,6 @@ import {
   ConnectionMessage,
   Text,
   InputWrapper,
-  InputImages,
 } from './ConnectionInputs.styles';
 
 const ConnectionInputs = ({
@@ -71,26 +72,7 @@ const ConnectionInputs = ({
   return (
     <>
       <InputWrapper>
-        {connectionType === 'snowflake' && (
-          <div>
-            <InputImages src="images/snowflake-icon.png" alt="snowflake" />
-          </div>
-        )}
-        {connectionType === 'github' && (
-          <div>
-            <InputImages src="images/github-icon.png" alt="github" />
-          </div>
-        )}
-        {connectionType === 'postgreSql' && (
-          <div>
-            <InputImages src="images/postgresql-icon.png" alt="postgreSql" />
-          </div>
-        )}
-        {connectionType === 'mySql' && (
-          <div>
-            <InputImages src="images/mysql-icon.png" alt="mySql" />
-          </div>
-        )}
+        <SelectedImage connectionType={connectionType} />
         <ConnectionDiv>
           <Input
             type="text"
@@ -144,13 +126,13 @@ const ConnectionInputs = ({
             onChange={(e) => setPort(e.target.value)}
             label="Port"
             id="port"
-            isNumber="true"
+            isNumber={true}
           />
         </ConnectionDiv>
         <TestButton>
           <Button
             variant="light"
-            isFull="true"
+            isFull={true}
             onClick={() => testConnection()}
             label="Test connection"
           />

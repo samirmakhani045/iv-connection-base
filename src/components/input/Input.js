@@ -95,7 +95,7 @@ Input.propTypes = {
   // Callback function
   onChange: PropTypes.func.isRequired,
   // max length of number
-  maxLength: PropTypes.bool.isRequired,
+  maxLength: PropTypes.string.isRequired,
   // is number
   isNumber: PropTypes.bool,
 };
