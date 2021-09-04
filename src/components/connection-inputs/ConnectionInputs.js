@@ -138,7 +138,7 @@ const ConnectionInputs = ({
         </TestButton>
         {isShowSuccess && (
           <ConnectionMessage success={true}>
-            <Text success={true}></Text>
+            <Text success={true}>{t('success.dbConnectionSuccess')}</Text>
           </ConnectionMessage>
         )}
         {isShowError && (

@@ -27,6 +27,9 @@ module.exports = {
       required: 'Your connection has been tested & is now working',
     },
   },
+  success: {
+    dbConnectionSuccess: 'Your connection has been tested & is now working',
+  },
   dropdown: {
     placeholder: 'Select',
     multiSelected: '%{count} items selected',
