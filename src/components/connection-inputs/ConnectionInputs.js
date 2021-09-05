@@ -68,7 +68,7 @@ const ConnectionInputs = ({
       port: portValue,
     });
   };
-  const { t } = useTranslation('common.forms');
+  const { t } = useTranslation();
   return (
     <>
       <InputWrapper>
@@ -80,7 +80,7 @@ const ConnectionInputs = ({
             value={nickNameValue}
             name="nickName"
             onChange={(e) => setNickName(e.target.value)}
-            label={t('fields.nickName') + '*'}
+            label={t('en.common.forms.fields.nickName') + '*'}
             id="nickName"
           />
         </ConnectionDiv>
@@ -91,7 +91,7 @@ const ConnectionInputs = ({
             value={databaseNameValue}
             name="databaseName"
             onChange={(e) => setDatabaseName(e.target.value)}
-            label={t('fields.databaseName')}
+            label={t('en.common.forms.fields.databaseName')}
             id="database"
           />
         </ConnectionDiv>
@@ -102,7 +102,7 @@ const ConnectionInputs = ({
             value={warehouseValue}
             name="warehouse"
             onChange={(e) => setWarehouse(e.target.value)}
-            label={t('fields.warehouse')}
+            label={t('en.common.forms.fields.warehouse')}
             id="warehouse"
           />
         </ConnectionDiv>
@@ -113,7 +113,7 @@ const ConnectionInputs = ({
             value={serverValue}
             name="server"
             onChange={(e) => setServer(e.target.value)}
-            label={t('fields.server')}
+            label={t('en.common.forms.fields.server')}
             id="server"
           />
         </ConnectionDiv>
@@ -124,7 +124,7 @@ const ConnectionInputs = ({
             value={portValue}
             name="port"
             onChange={(e) => setPort(e.target.value)}
-            label={t('fields.port')}
+            label={t('en.common.forms.fields.port')}
             id="port"
             isNumber={true}
           />
@@ -139,22 +139,22 @@ const ConnectionInputs = ({
         </TestButton>
         {isShowSuccess && (
           <ConnectionMessage success={true}>
-            <Text success={true}>{t('success.dbConnectionSuccess')}</Text>
+            <Text success={true}>{t('en.common.forms.success.dbConnectionSuccess')}</Text>
           </ConnectionMessage>
         )}
         {isShowError && (
           <ConnectionMessage success={false}>
-            <Text success={false}>{t('errors.dbConnectionError.required')}</Text>
+            <Text success={false}>{t('en.common.forms.errors.dbConnectionError.required')}</Text>
           </ConnectionMessage>
         )}
       </InputWrapper>
       <StepFooter>
-        <Button variant="light" onClick={() => backStep()} label="Back" />
+        <Button variant="light" onClick={() => backStep()} label={t('en.common.button.back')} />
         <Button
           variant="dark"
           disabled={!isShowSuccess}
           onClick={() => forwardStep()}
-          label="Next"
+          label={t('en.common.button.next')}
         />
       </StepFooter>
     </>

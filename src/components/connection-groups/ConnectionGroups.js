@@ -32,7 +32,7 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
   const backStep = () => {
     previousStep({ onlyMe: onlyMeValue, allUsers: allUsersValue });
   };
-  const { t } = useTranslation('components.connectionGroups');
+  const { t } = useTranslation();
   return (
     <>
       <GroupWrapper>
@@ -41,18 +41,20 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
             <SelectedImage connectionType={connectionType} />
           </div>
           <DatabaseText>
-            <span>{t('databaseName')}</span>
+            <span>{t('en.components.connectionGroups.databaseName')}</span>
           </DatabaseText>
-          <ConnectedText>{t('connected')}</ConnectedText>
+          <ConnectedText>{t('en.components.connectionGroups.connected')}</ConnectedText>
         </TopGroup>
-        <NumberTable>34 {t('tab')}</NumberTable>
+        <NumberTable>34 {t('en.components.connectionGroups.tab')}</NumberTable>
       </GroupWrapper>
-      <ShareText>{t('shareConnectionGroups')}</ShareText>
+      <ShareText>{t('en.components.connectionGroups.shareConnectionGroups')}</ShareText>
       <InputBox>
         <InputBoxChild first>
           <First>
             <BlankDiv first />
-            <OnlyMeText fontColor={!onlyMeValue}>{t('onlyMe')}</OnlyMeText>
+            <OnlyMeText fontColor={!onlyMeValue}>
+              {t('en.components.connectionGroups.onlyMe')}
+            </OnlyMeText>
           </First>
           <CustomCheckBox>
             <CheckBoxInput
@@ -66,7 +68,9 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
         <InputBoxChild>
           <First>
             <BlankDiv />
-            <OnlyMeText fontColor={!allUsersValue}>{t('allUser')}</OnlyMeText>
+            <OnlyMeText fontColor={!allUsersValue}>
+              {t('en.components.connectionGroups.allUser')}
+            </OnlyMeText>
           </First>
           <CustomCheckBox>
             <CheckBoxInput
@@ -79,8 +83,8 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
         </InputBoxChild>
       </InputBox>
       <StepFooter>
-        <Button variant="light" onClick={() => backStep()} label="Back" />
-        <Button variant="dark" disabled="true" label="Next" />
+        <Button variant="light" onClick={() => backStep()} label={t('en.common.button.back')} />
+        <Button variant="dark" disabled="true" label={t('en.common.button.next')} />
       </StepFooter>
     </>
   );
