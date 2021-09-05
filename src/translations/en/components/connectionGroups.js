@@ -5,6 +5,4 @@ module.exports = {
   shareConnectionGroups: 'Share this connection with your groups',
   onlyMe: 'Only Me',
   allUser: 'All Users',
-  back: 'Back',
-  next: 'Next',
 };
