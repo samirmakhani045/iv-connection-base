@@ -45,7 +45,7 @@ export const Circle = styled.div((props) => ({
 
   ...(props.selected && {
     background: props.stepperError
-      ? 'linear-gradient(37deg, rgb(247, 108, 108) 10%, #eff4f8 0%) !important'
+      ? 'linear-gradient(37deg, rgb(247, 108, 108) 10%, #eff4f8 0%) '
       : 'linear-gradient(37deg, #43c0a3 10%, #eff4f8 0%)',
   }),
 }));

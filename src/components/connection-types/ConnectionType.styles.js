@@ -20,7 +20,7 @@ export const TypeImage = styled.img((props) => ({
 
   ...(props.close && {
     float: 'right',
-    width: '15px !important',
+    width: '15px',
     paddingTop: '5px',
   }),
 }));
