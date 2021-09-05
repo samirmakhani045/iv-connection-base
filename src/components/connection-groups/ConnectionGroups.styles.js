@@ -57,6 +57,7 @@ export const InputBox = styled.div({
 
 export const InputBoxChild = styled.div((props) => ({
   paddingBottom: '16px',
+  paddingTop: '16px',
   display: 'flex',
   justifyContent: 'space-between',
 
