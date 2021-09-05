@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { useTranslation } from '@studio/hooks/useTranslation';
 import SelectedImage from '@studio/utils/selectedImage';
 
+import FooterLayout from '@studio/utils/footerBtn';
+
 import Input from '../input/Input';
 import Button from '../button/Button';
 import { StepFooter } from '../stepper/Stepper.styles';
@@ -68,7 +70,7 @@ const ConnectionInputs = ({
       port: portValue,
     });
   };
-  const { t } = useTranslation();
+  const { t } = useTranslation('common.forms');
   return (
     <>
       <InputWrapper>
@@ -80,7 +82,7 @@ const ConnectionInputs = ({
             value={nickNameValue}
             name="nickName"
             onChange={(e) => setNickName(e.target.value)}
-            label={t('en.common.forms.fields.nickName') + '*'}
+            label={t('fields.nickName') + '*'}
             id="nickName"
           />
         </ConnectionDiv>
@@ -91,7 +93,7 @@ const ConnectionInputs = ({
             value={databaseNameValue}
             name="databaseName"
             onChange={(e) => setDatabaseName(e.target.value)}
-            label={t('en.common.forms.fields.databaseName')}
+            label={t('fields.databaseName')}
             id="database"
           />
         </ConnectionDiv>
@@ -102,7 +104,7 @@ const ConnectionInputs = ({
             value={warehouseValue}
             name="warehouse"
             onChange={(e) => setWarehouse(e.target.value)}
-            label={t('en.common.forms.fields.warehouse')}
+            label={t('fields.warehouse')}
             id="warehouse"
           />
         </ConnectionDiv>
@@ -113,7 +115,7 @@ const ConnectionInputs = ({
             value={serverValue}
             name="server"
             onChange={(e) => setServer(e.target.value)}
-            label={t('en.common.forms.fields.server')}
+            label={t('fields.server')}
             id="server"
           />
         </ConnectionDiv>
@@ -124,7 +126,7 @@ const ConnectionInputs = ({
             value={portValue}
             name="port"
             onChange={(e) => setPort(e.target.value)}
-            label={t('en.common.forms.fields.port')}
+            label={t('fields.port')}
             id="port"
             isNumber={true}
           />
@@ -139,22 +141,20 @@ const ConnectionInputs = ({
         </TestButton>
         {isShowSuccess && (
           <ConnectionMessage success={true}>
-            <Text success={true}>{t('en.common.forms.success.dbConnectionSuccess')}</Text>
+            <Text success={true}>{t('success.dbConnectionSuccess')}</Text>
           </ConnectionMessage>
         )}
         {isShowError && (
           <ConnectionMessage success={false}>
-            <Text success={false}>{t('en.common.forms.errors.dbConnectionError.required')}</Text>
+            <Text success={false}>{t('errors.dbConnectionError.required')}</Text>
           </ConnectionMessage>
         )}
       </InputWrapper>
       <StepFooter>
-        <Button variant="light" onClick={() => backStep()} label={t('en.common.button.back')} />
-        <Button
-          variant="dark"
-          disabled={!isShowSuccess}
-          onClick={() => forwardStep()}
-          label={t('en.common.button.next')}
+        <FooterLayout
+          backStep={backStep}
+          forwardStep={forwardStep}
+          isShowSuccess={!isShowSuccess}
         />
       </StepFooter>
     </>

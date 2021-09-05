@@ -34,4 +34,8 @@ module.exports = {
     placeholder: 'Select',
     multiSelected: '%{count} items selected',
   },
+  labels: {
+    back: 'Back',
+    next: 'Next',
+  },
 };

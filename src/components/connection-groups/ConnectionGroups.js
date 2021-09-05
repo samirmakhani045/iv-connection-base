@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 import { useTranslation } from '@studio/hooks/useTranslation';
 
 import SelectedImage from '@studio/utils/selectedImage';
-
-import Button from '../button/Button';
+import FooterLayout from '@studio/utils/footerBtn';
 
 import { StepFooter } from '../stepper/Stepper.styles';
 
@@ -32,7 +31,7 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
   const backStep = () => {
     previousStep({ onlyMe: onlyMeValue, allUsers: allUsersValue });
   };
-  const { t } = useTranslation();
+  const { t } = useTranslation('components.connectionGroups'); // 'common.forms'
   return (
     <>
       <GroupWrapper>
@@ -41,20 +40,18 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
             <SelectedImage connectionType={connectionType} />
           </div>
           <DatabaseText>
-            <span>{t('en.components.connectionGroups.databaseName')}</span>
+            <span>{t('databaseName')}</span>
           </DatabaseText>
-          <ConnectedText>{t('en.components.connectionGroups.connected')}</ConnectedText>
+          <ConnectedText>{t('connected')}</ConnectedText>
         </TopGroup>
-        <NumberTable>34 {t('en.components.connectionGroups.tab')}</NumberTable>
+        <NumberTable>34 {t('tab')}</NumberTable>
       </GroupWrapper>
-      <ShareText>{t('en.components.connectionGroups.shareConnectionGroups')}</ShareText>
+      <ShareText>{t('shareConnectionGroups')}</ShareText>
       <InputBox>
         <InputBoxChild first>
           <First>
             <BlankDiv first />
-            <OnlyMeText fontColor={!onlyMeValue}>
-              {t('en.components.connectionGroups.onlyMe')}
-            </OnlyMeText>
+            <OnlyMeText fontColor={!onlyMeValue}>{t('onlyMe')}</OnlyMeText>
           </First>
           <CustomCheckBox>
             <CheckBoxInput
@@ -68,9 +65,7 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
         <InputBoxChild>
           <First>
             <BlankDiv />
-            <OnlyMeText fontColor={!allUsersValue}>
-              {t('en.components.connectionGroups.allUser')}
-            </OnlyMeText>
+            <OnlyMeText fontColor={!allUsersValue}>{t('allUser')}</OnlyMeText>
           </First>
           <CustomCheckBox>
             <CheckBoxInput
@@ -83,8 +78,7 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
         </InputBoxChild>
       </InputBox>
       <StepFooter>
-        <Button variant="light" onClick={() => backStep()} label={t('en.common.button.back')} />
-        <Button variant="dark" disabled="true" label={t('en.common.button.next')} />
+        <FooterLayout backStep={backStep} isShowSuccess />
       </StepFooter>
     </>
   );
