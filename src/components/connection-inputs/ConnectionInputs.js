@@ -36,18 +36,30 @@ const ConnectionInputs = ({
   const [isShowSuccess, setSuccess] = useState(false);
   const [isShowError, setError] = useState(false);
 
+  const showMessage = (value) => {
+    switch (value) {
+      case 'success':
+        setStepError(false);
+        setSuccess(true);
+        setError(false);
+        break;
+      case 'error':
+        setSuccess(false);
+        if (setStepError) {
+          setStepError(true);
+        }
+        setError(true);
+        break;
+      default:
+        break;
+    }
+  };
+
   const testConnection = () => {
     if (!nickNameValue) {
-      setError(true);
-      if (setStepError) {
-        setStepError(true);
-      } else {
-        setSuccess(false);
-      }
+      showMessage('error');
     } else {
-      setStepError(false);
-      setSuccess(true);
-      setError(false);
+      showMessage('success');
     }
   };
 
