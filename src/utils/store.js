@@ -11,6 +11,7 @@ import {
 import { fetchTables } from '@studio/store/table';
 import { fetchElements, fetchElement } from '@studio/store/element';
 import { fetchRows } from '@studio/store/row';
+import { fetchConnector } from '@studio/store/connector';
 
 export const mapCommonStates = (TargetComponent) => {
   const mapGlobalStateToProps = (state) => ({
@@ -19,6 +20,7 @@ export const mapCommonStates = (TargetComponent) => {
     tableState: state.tableSlice,
     elementState: state.elementSlice,
     rowState: state.rowSlice,
+    connectorState: state.connectorSlice,
   });
 
   const mapGlobalDispatchToProps = (dispatch) => ({
@@ -31,6 +33,7 @@ export const mapCommonStates = (TargetComponent) => {
     fetchElement: (payload) => dispatch(fetchElement(payload)),
     fetchTables: (payload) => dispatch(fetchTables(payload)),
     fetchRows: (payload) => dispatch(fetchRows(payload)),
+    fetchConnector: (payload) => dispatch(fetchConnector(payload)),
   });
 
   return connect(mapGlobalStateToProps, mapGlobalDispatchToProps)(TargetComponent);

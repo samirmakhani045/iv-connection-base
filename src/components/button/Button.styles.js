@@ -64,6 +64,7 @@ export const StyledButton = styled('button', {
   justifyContent: 'center',
   lineHeight: props.small ? '1.2rem' : '1.6rem',
   padding: props.small ? '1.2rem' : '1.5rem 1.6rem',
+  width: props.isFull ? '100%' : '',
 }));
 
 export const StyledIcon = styled(Icon, {
