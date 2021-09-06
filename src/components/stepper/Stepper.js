@@ -22,7 +22,7 @@ const Stepper = ({ steps }) => {
     warehouse: '',
     server: '',
     port: '',
-    onlyMe: true,
+    onlyMe: false,
     allUsers: false,
   });
 

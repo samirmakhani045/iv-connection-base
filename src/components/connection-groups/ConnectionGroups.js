@@ -48,31 +48,23 @@ const ConnectionGroups = ({ previousStep, connectionType, onlyMe, allUsers }) =>
       </GroupWrapper>
       <ShareText>{t('shareConnectionGroups')}</ShareText>
       <InputBox>
-        <InputBoxChild first>
+        <InputBoxChild first onClick={() => setOnlyMe(!onlyMeValue)}>
           <First>
             <BlankDiv first />
             <OnlyMeText fontColor={!onlyMeValue}>{t('onlyMe')}</OnlyMeText>
           </First>
           <CustomCheckBox>
-            <CheckBoxInput
-              type="checkbox"
-              checked={onlyMeValue}
-              onClick={() => setOnlyMe(!onlyMeValue)}
-            />
+            <CheckBoxInput type="checkbox" checked={onlyMeValue} />
             <CheckTick />
           </CustomCheckBox>
         </InputBoxChild>
-        <InputBoxChild>
+        <InputBoxChild onClick={() => setAllUsers(!allUsersValue)}>
           <First>
             <BlankDiv />
             <OnlyMeText fontColor={!allUsersValue}>{t('allUser')}</OnlyMeText>
           </First>
           <CustomCheckBox>
-            <CheckBoxInput
-              type="checkbox"
-              checked={allUsersValue}
-              onClick={() => setAllUsers(!allUsersValue)}
-            />
+            <CheckBoxInput type="checkbox" checked={allUsersValue} />
             <CheckTick />
           </CustomCheckBox>
         </InputBoxChild>
