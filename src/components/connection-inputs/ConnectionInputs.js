@@ -45,9 +45,7 @@ const ConnectionInputs = ({
         break;
       case 'error':
         setSuccess(false);
-        if (setStepError) {
-          setStepError(true);
-        }
+        setStepError(true);
         setError(true);
         break;
       default:
